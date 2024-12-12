@@ -4,6 +4,7 @@
 
 .nav-bar {
     display: flex;
+    margin-left: 300px;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
