@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Guard Duty: Lifeguards vs. Patrons",
-  description: "A hidden-role team-based deduction game",
+  description: "A thrilling social deduction board game where strategy meets summer fun!",
 }
 
 export default function RootLayout({
