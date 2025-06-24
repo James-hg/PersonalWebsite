@@ -1,108 +1,195 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Separator } from "@/components/ui/separator"
-import { Users, Eye, Shield, Waves, Clock, Target, Crown, Zap } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
+"use client"
 
-export default function HomePage() {
-  const roles = [
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Input } from "@/components/ui/input"
+import {
+  Shield,
+  Eye,
+  Megaphone,
+  Heart,
+  Search,
+  Users,
+  ShieldCheck,
+  Crown,
+  Volume2,
+  UserCheck,
+  UserPlus,
+  Waves,
+  Sun,
+  Timer,
+  Target,
+  Mail,
+  Github,
+  Twitter,
+  Facebook,
+} from "lucide-react"
+
+export default function GuardDutyWebsite() {
+  const [email, setEmail] = useState("")
+
+  const lifeguardRoles = [
     {
       name: "Security",
+      icon: <Search className="w-6 h-6" />,
+      description: "Learns a player's alignment each night",
+      ability: "Cannot target the same player on consecutive nights",
       team: "lifeguard",
-      ability: "Learns a player's alignment each night",
-      icon: Eye,
-      description: "Cannot target the same player on consecutive nights",
     },
     {
       name: "Camera Observer",
+      icon: <Eye className="w-6 h-6" />,
+      description: "Observes one pool to determine sabotage",
+      ability: "Cannot observe the same pool twice in a row",
       team: "lifeguard",
-      ability: "Observes one pool to determine sabotage",
-      icon: Target,
-      description: "Cannot observe the same pool twice in a row",
     },
     {
       name: "Whistle Marshal",
+      icon: <Megaphone className="w-6 h-6" />,
+      description: "Silences one player per night",
+      ability: "Silenced players cannot make any actions",
       team: "lifeguard",
-      ability: "Silences one player per night",
-      icon: Zap,
-      description: "Silenced players cannot make any actions",
     },
     {
-      name: "Leader Patron",
-      team: "patron",
-      ability: "Chooses pool to sabotage and target player",
-      icon: Crown,
-      description: "If sabotage succeeds, target player is eliminated",
-    },
-    {
-      name: "Disruptor Patron",
-      team: "patron",
-      ability: "Mutes a player for the next day",
-      icon: Zap,
-      description: "That player cannot speak or defend themselves",
-    },
-    {
-      name: "Regular Lifeguard",
+      name: "Rescue Diver",
+      icon: <Heart className="w-6 h-6" />,
+      description: "Gains elimination ability after first sabotage",
+      ability: "One-time use, unlocked after successful sabotage",
       team: "lifeguard",
-      ability: "Guards specific pools",
-      icon: Shield,
-      description: "Prevents sabotage when guarding the targeted pool",
-      image: "/images/lifeguard-card.png",
+    },
+    {
+      name: "Supervisor",
+      icon: <Shield className="w-6 h-6" />,
+      description: "Learns if a player performed an action",
+      ability: "Detects sabotage, guard, or investigate actions",
+      team: "lifeguard",
+    },
+    {
+      name: "Security Bodyguard",
+      icon: <ShieldCheck className="w-6 h-6" />,
+      description: "Protects one player each night",
+      ability: "Prevents elimination or conversion",
+      team: "lifeguard",
     },
   ]
 
-  const features = [
+  const patronRoles = [
     {
-      icon: Users,
-      title: "Hidden Roles",
-      description: "Secret team assignments create tension and mystery",
+      name: "Leader Patron",
+      icon: <Crown className="w-6 h-6" />,
+      description: "Chooses pools to sabotage and targets to eliminate",
+      ability: "Eliminates target if sabotage succeeds",
+      team: "patron",
     },
     {
-      icon: Waves,
-      title: "Pool Strategy",
-      description: "Strategic pool guarding vs sabotage mechanics",
+      name: "Disruptor Patron",
+      icon: <Volume2 className="w-6 h-6" />,
+      description: "Mutes a player for the next day",
+      ability: "Target cannot speak or defend themselves",
+      team: "patron",
     },
     {
-      icon: Clock,
-      title: "Night-Day Cycles",
-      description: "Dynamic gameplay with secret actions and public discussion",
+      name: "Chameleon Patron",
+      icon: <UserCheck className="w-6 h-6" />,
+      description: "Appears as Lifeguard when investigated",
+      ability: "Fools Security investigations",
+      team: "patron",
+    },
+    {
+      name: "Recruiter Patron",
+      icon: <UserPlus className="w-6 h-6" />,
+      description: "Can convert the Sleeper Lifeguard",
+      ability: "Once per game conversion attempt",
+      team: "patron",
+    },
+  ]
+
+  const gameplaySteps = [
+    {
+      phase: "Night Phase",
+      icon: <Timer className="w-8 h-8" />,
+      description: "All players close their eyes. Narrator calls roles to act in order.",
+      details: [
+        "Leader Patron targets a player",
+        "Disruptor Patron chooses player to mute",
+        "Recruiter Patron attempts conversion",
+        "All Patrons confirm sabotage target",
+        "Lifeguards assign pool guards",
+        "Special roles use their abilities",
+      ],
+    },
+    {
+      phase: "Results Phase",
+      icon: <Target className="w-8 h-8" />,
+      description: "Narrator reveals outcomes of night actions.",
+      details: [
+        "Eliminated players announced",
+        "Winning conditions checked",
+        "Muted players revealed",
+        "Sabotage results shared",
+      ],
+    },
+    {
+      phase: "Discussion Phase",
+      icon: <Users className="w-8 h-8" />,
+      description: "Players discuss, vote, and potentially eliminate suspects.",
+      details: [
+        "30-60 seconds of open discussion",
+        "Vote for elimination candidate",
+        "Accused player gets 30-60 seconds to defend",
+        "Final elimination vote",
+        "Check winning conditions",
+      ],
     },
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b-2 border-blue-200">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-red-50">
+      {/* Navigation */}
+      <nav className="sticky top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-blue-200">
         <div className="container mx-auto px-4 py-4">
-          <nav className="flex items-center justify-between">
+          <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <Waves className="h-8 w-8 text-blue-600" />
+              <Waves className="w-8 h-8 text-blue-600" />
               <span className="text-2xl font-bold text-blue-900">Guard Duty</span>
             </div>
             <div className="hidden md:flex space-x-6">
-              <Link href="#about" className="text-blue-700 hover:text-blue-900 font-medium">
+              <a href="#home" className="text-blue-700 hover:text-blue-900 font-medium">
+                Home
+              </a>
+              <a href="#about" className="text-blue-700 hover:text-blue-900 font-medium">
                 About
-              </Link>
-              <Link href="#how-to-play" className="text-blue-700 hover:text-blue-900 font-medium">
+              </a>
+              <a href="#how-to-play" className="text-blue-700 hover:text-blue-900 font-medium">
                 How to Play
-              </Link>
-              <Link href="#roles" className="text-blue-700 hover:text-blue-900 font-medium">
+              </a>
+              <a href="#roles" className="text-blue-700 hover:text-blue-900 font-medium">
                 Roles
-              </Link>
+              </a>
+              <a href="#contact" className="text-blue-700 hover:text-blue-900 font-medium">
+                Contact
+              </a>
             </div>
-          </nav>
+          </div>
         </div>
-      </header>
+      </nav>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 text-center bg-gradient-to-r from-blue-600 to-red-500 text-white overflow-hidden">
+      <section
+        id="home"
+        className="relative py-20 px-4 text-center bg-gradient-to-r from-blue-600 to-red-600 text-white overflow-hidden"
+      >
         <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative container mx-auto max-w-4xl">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">Guard Duty</h1>
-          <h2 className="text-2xl md:text-3xl mb-4 text-blue-100">Lifeguards vs. Patrons</h2>
-          <p className="text-xl md:text-2xl mb-8 text-blue-50">Where strategy meets summer fun!</p>
+        <div className="relative z-10 container mx-auto">
+          <div className="flex items-center justify-center mb-6">
+            <Sun className="w-12 h-12 mr-4 text-yellow-300" />
+            <h1 className="text-5xl md:text-7xl font-bold">Guard Duty</h1>
+            <Waves className="w-12 h-12 ml-4 text-blue-300" />
+          </div>
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Lifeguards vs. Patrons</h2>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Where strategy meets summer fun!</p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <Badge variant="secondary" className="text-lg px-4 py-2 bg-white/20 text-white border-white/30">
               Hidden Roles
@@ -113,129 +200,139 @@ export default function HomePage() {
             <Badge variant="secondary" className="text-lg px-4 py-2 bg-white/20 text-white border-white/30">
               Team Strategy
             </Badge>
+            <Badge variant="secondary" className="text-lg px-4 py-2 bg-white/20 text-white border-white/30">
+              10+ Players
+            </Badge>
           </div>
           <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-3">
             Learn to Play
           </Button>
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold text-center mb-12 text-blue-900">About the Game</h2>
+      <section id="about" className="py-16 px-4 bg-gray-50">
+        <div className="container mx-auto">
           <div className="text-center mb-12">
-            <p className="text-xl text-gray-700 mb-6 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-blue-900 mb-6">About the Game</h2>
+            <p className="text-xl text-gray-700 max-w-4xl mx-auto mb-12">
               A thrilling social deduction game where teamwork and cunning decide the fate of the pool! Players are
               secretly divided into Lifeguards and Patrons, each with unique abilities and objectives.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {features.map((feature, index) => (
-              <Card
-                key={index}
-                className="text-center border-2 border-blue-200 hover:border-blue-400 transition-colors"
-              >
-                <CardHeader>
-                  <feature.icon className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                  <CardTitle className="text-blue-900">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600">{feature.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+          {/* Feature Cards */}
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <Card className="text-center p-8 bg-white border-2 border-gray-200">
+              <div className="flex justify-center mb-4">
+                <Users className="w-16 h-16 text-blue-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-blue-900 mb-4">Hidden Roles</h3>
+              <p className="text-gray-600">Secret team assignments create tension and mystery</p>
+            </Card>
+
+            <Card className="text-center p-8 bg-white border-2 border-gray-200">
+              <div className="flex justify-center mb-4">
+                <Waves className="w-16 h-16 text-blue-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-blue-900 mb-4">Pool Strategy</h3>
+              <p className="text-gray-600">Strategic pool guarding vs sabotage mechanics</p>
+            </Card>
+
+            <Card className="text-center p-8 bg-white border-2 border-gray-200">
+              <div className="flex justify-center mb-4">
+                <Timer className="w-16 h-16 text-blue-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-blue-900 mb-4">Night-Day Cycles</h3>
+              <p className="text-gray-600">Dynamic gameplay with secret actions and public discussion</p>
+            </Card>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl font-bold mb-4 text-blue-900">Victory Conditions</h3>
-              <div className="space-y-4">
-                <div className="p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
-                  <h4 className="font-semibold text-blue-900 mb-2">Lifeguards Win If:</h4>
-                  <ul className="text-gray-700 space-y-1">
-                    <li>• All Patrons are eliminated, or</li>
-                    <li>• The pool stays operational for all rounds</li>
-                  </ul>
-                </div>
-                <div className="p-4 bg-red-50 rounded-lg border-l-4 border-red-500">
-                  <h4 className="font-semibold text-red-900 mb-2">Patrons Win If:</h4>
-                  <ul className="text-gray-700 space-y-1">
-                    <li>• Patrons equal or outnumber Lifeguards, or</li>
-                    <li>• Enough sabotage actions succeed</li>
-                  </ul>
-                </div>
-              </div>
+          {/* Victory Conditions */}
+          <div className="mb-12">
+            <h3 className="text-3xl font-bold text-blue-900 mb-8 text-center">Victory Conditions</h3>
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <Card className="p-6 border-l-4 border-l-blue-500 bg-blue-50">
+                <h4 className="text-xl font-bold text-blue-900 mb-4">Lifeguards Win If:</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• All Patrons are eliminated, or</li>
+                  <li>• The pool stays operational for all rounds</li>
+                </ul>
+              </Card>
+
+              <Card className="p-6 border-l-4 border-l-red-500 bg-red-50">
+                <h4 className="text-xl font-bold text-red-900 mb-4">Patrons Win If:</h4>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• Patrons equal or outnumber Lifeguards, or</li>
+                  <li>• Enough sabotage actions succeed</li>
+                </ul>
+              </Card>
             </div>
-            <div className="text-center">
-              <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-blue-200">
-                <Users className="h-16 w-16 text-blue-600 mx-auto mb-4" />
-                <h4 className="text-xl font-bold text-blue-900 mb-2">10+ Players</h4>
+
+            {/* Player Count Card */}
+            <div className="flex justify-center">
+              <Card className="text-center p-8 bg-white border-2 border-blue-200 max-w-sm">
+                <div className="flex justify-center mb-4">
+                  <Users className="w-16 h-16 text-blue-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-blue-900 mb-2">10+ Players</h3>
                 <p className="text-gray-600">Perfect for parties and game nights</p>
-              </div>
+              </Card>
             </div>
           </div>
         </div>
       </section>
 
       {/* How to Play Section */}
-      <section id="how-to-play" className="py-16 px-4 bg-white">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold text-center mb-12 text-blue-900">How to Play</h2>
+      <section id="how-to-play" className="py-16 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-blue-900 mb-12">How to Play</h2>
+          </div>
 
+          {/* Phase Cards */}
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Card className="border-2 border-blue-200">
-              <CardHeader className="bg-blue-50">
-                <CardTitle className="text-blue-900 flex items-center">
-                  <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 text-sm font-bold">
-                    1
-                  </div>
-                  Night Phase
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="pt-6">
-                <p className="text-gray-700">
-                  All players close their eyes. The narrator calls on roles to act in order, maintaining secrecy.
-                </p>
-              </CardContent>
+            <Card className="p-8 bg-blue-50 border-2 border-blue-200">
+              <div className="flex items-center mb-4">
+                <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mr-3">
+                  1
+                </div>
+                <h3 className="text-2xl font-bold text-blue-900">Night Phase</h3>
+              </div>
+              <p className="text-gray-700">
+                All players close their eyes. The narrator calls on roles to act in order, maintaining secrecy.
+              </p>
             </Card>
 
-            <Card className="border-2 border-yellow-200">
-              <CardHeader className="bg-yellow-50">
-                <CardTitle className="text-yellow-900 flex items-center">
-                  <div className="bg-yellow-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 text-sm font-bold">
-                    2
-                  </div>
-                  Results Phase
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="pt-6">
-                <p className="text-gray-700">
-                  The narrator reveals outcomes like eliminations and muted players to all participants.
-                </p>
-              </CardContent>
+            <Card className="p-8 bg-yellow-50 border-2 border-yellow-300">
+              <div className="flex items-center mb-4">
+                <div className="w-8 h-8 bg-yellow-600 text-white rounded-full flex items-center justify-center font-bold mr-3">
+                  2
+                </div>
+                <h3 className="text-2xl font-bold text-yellow-800">Results Phase</h3>
+              </div>
+              <p className="text-gray-700">
+                The narrator reveals outcomes like eliminations and muted players to all participants.
+              </p>
             </Card>
 
-            <Card className="border-2 border-red-200">
-              <CardHeader className="bg-red-50">
-                <CardTitle className="text-red-900 flex items-center">
-                  <div className="bg-red-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 text-sm font-bold">
-                    3
-                  </div>
-                  Day Phase
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="pt-6">
-                <p className="text-gray-700">
-                  Players discuss, vote, and potentially eliminate a suspect through democratic process.
-                </p>
-              </CardContent>
+            <Card className="p-8 bg-red-50 border-2 border-red-200">
+              <div className="flex items-center mb-4">
+                <div className="w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center font-bold mr-3">
+                  3
+                </div>
+                <h3 className="text-2xl font-bold text-red-900">Day Phase</h3>
+              </div>
+              <p className="text-gray-700">
+                Players discuss, vote, and potentially eliminate a suspect through democratic process.
+              </p>
             </Card>
           </div>
 
-          <div className="bg-blue-50 p-8 rounded-lg border-2 border-blue-200">
-            <h3 className="text-2xl font-bold mb-4 text-blue-900">Pool Guarding System</h3>
+          {/* Pool Guarding System */}
+          <Card className="p-8 bg-blue-50 border-2 border-blue-200">
+            <h3 className="text-2xl font-bold text-blue-900 mb-4">Pool Guarding System</h3>
             <p className="text-gray-700 mb-4">
               The game features more pools than guards (e.g., 4 pools, 3 guards). Lifeguards must strategically choose
               which pools to guard each night, while Patrons attempt to sabotage unguarded pools.
@@ -244,106 +341,299 @@ export default function HomePage() {
               <strong>Key:</strong> If the chosen sabotage pool is unguarded, sabotage succeeds and unlocks special
               abilities!
             </p>
+          </Card>
+
+          {/* Night Action Order */}
+          <div className="mt-12">
+            <Card className="p-8 bg-white border-2 border-gray-200">
+              <h3 className="text-3xl font-bold text-center mb-8">Night Action Order</h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="text-xl font-bold text-red-600 mb-6">Patron Actions (1-4)</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-start">
+                      <span className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
+                        1
+                      </span>
+                      <span className="text-gray-700">Leader Patron - Target Player</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
+                        2
+                      </span>
+                      <span className="text-gray-700">Disruptor Patron - Mute Player</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
+                        3
+                      </span>
+                      <span className="text-gray-700">Recruiter Patron - Convert Attempt</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
+                        4
+                      </span>
+                      <span className="text-gray-700">All Patrons - Confirm Sabotage</span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold text-blue-600 mb-6">Lifeguard Actions (5-11)</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-start">
+                      <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
+                        5
+                      </span>
+                      <span className="text-gray-700">Whistle Marshal - Silence Player</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
+                        6
+                      </span>
+                      <span className="text-gray-700">Rescue Diver - Eliminate (if unlocked)</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
+                        7
+                      </span>
+                      <span className="text-gray-700">Lifeguards - Assign Pool Guards</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
+                        8
+                      </span>
+                      <span className="text-gray-700">Supervisor - Learn Player Action</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
+                        9
+                      </span>
+                      <span className="text-gray-700">Security - Learn Alignment</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
+                        10
+                      </span>
+                      <span className="text-gray-700">Security Bodyguard - Protect Player</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
+                        11
+                      </span>
+                      <span className="text-gray-700">Camera Observer - Observe Pool</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Roles Section */}
-      <section id="roles" className="py-16 px-4 bg-gradient-to-b from-blue-50 to-white">
-        <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl font-bold text-center mb-12 text-blue-900">Meet the Roles</h2>
+      <section id="roles" className="py-16 px-4 bg-gray-50">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-blue-900 mb-4">Meet the Roles</h2>
+            <p className="text-xl text-gray-700">Discover the unique characters and their special abilities</p>
+          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {roles.map((role, index) => (
-              <Card
-                key={index}
-                className={`border-2 transition-all duration-300 hover:scale-105 hover:shadow-lg ${
-                  role.team === "lifeguard"
-                    ? "border-blue-300 hover:border-blue-500"
-                    : "border-red-300 hover:border-red-500"
-                }`}
-              >
-                <CardHeader className={`${role.team === "lifeguard" ? "bg-blue-50" : "bg-red-50"}`}>
-                  <div className="flex items-center justify-between">
-                    <CardTitle className={`${role.team === "lifeguard" ? "text-blue-900" : "text-red-900"}`}>
-                      {role.name}
-                    </CardTitle>
-                    <Badge variant={role.team === "lifeguard" ? "default" : "destructive"} className="capitalize">
-                      {role.team}
-                    </Badge>
-                  </div>
-                </CardHeader>
-                <CardContent className="pt-6">
-                  {role.image ? (
-                    <div className="mb-4 flex justify-center">
-                      <Image
-                        src={role.image || "/placeholder.svg"}
-                        alt={role.name}
-                        width={120}
-                        height={160}
-                        className="rounded-lg shadow-md"
-                      />
+          {/* Lifeguard Roles */}
+          <div className="mb-16">
+            <div className="flex items-center justify-center mb-8">
+              <Shield className="w-8 h-8 text-blue-600 mr-3" />
+              <h3 className="text-3xl font-bold text-blue-900">Lifeguard Team</h3>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {lifeguardRoles.map((role, index) => (
+                <Card key={index} className="hover:shadow-lg transition-all border-2 border-blue-200 bg-white">
+                  <CardHeader className="text-center">
+                    <div className="flex justify-center mb-3">
+                      <div className="p-3 bg-blue-100 rounded-full text-blue-600">{role.icon}</div>
                     </div>
-                  ) : (
-                    <role.icon
-                      className={`h-12 w-12 mx-auto mb-4 ${
-                        role.team === "lifeguard" ? "text-blue-600" : "text-red-600"
-                      }`}
-                    />
-                  )}
-                  <p className="font-semibold text-gray-900 mb-2">{role.ability}</p>
-                  <p className="text-sm text-gray-600">{role.description}</p>
+                    <CardTitle className="text-blue-800">{role.name}</CardTitle>
+                    <CardDescription>{role.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-sm text-gray-600 bg-blue-50 p-3 rounded">
+                      <strong>Special Rule:</strong> {role.ability}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+
+              {/* Regular Lifeguards */}
+              <Card className="hover:shadow-lg transition-all border-2 border-blue-200 bg-white">
+                <CardHeader className="text-center">
+                  <div className="flex justify-center mb-3">
+                    <div className="p-3 bg-blue-100 rounded-full text-blue-600">
+                      <Users className="w-6 h-6" />
+                    </div>
+                  </div>
+                  <CardTitle className="text-blue-800">Regular Lifeguards</CardTitle>
+                  <CardDescription>Guard pools each night from sabotage</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="text-sm text-gray-600 bg-blue-50 p-3 rounded">
+                    <strong>Special Rule:</strong> If a pool is left unguarded and sabotaged, sabotage succeeds
+                  </div>
                 </CardContent>
               </Card>
-            ))}
+
+              {/* Sleeper Lifeguard */}
+              <Card className="hover:shadow-lg transition-all border-2 border-blue-200 bg-white">
+                <CardHeader className="text-center">
+                  <div className="flex justify-center mb-3">
+                    <div className="p-3 bg-blue-100 rounded-full text-blue-600">
+                      <Eye className="w-6 h-6" />
+                    </div>
+                  </div>
+                  <CardTitle className="text-blue-800">Sleeper Lifeguard</CardTitle>
+                  <CardDescription>No active ability but knows their role</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="text-sm text-gray-600 bg-blue-50 p-3 rounded">
+                    <strong>Special Rule:</strong> Can be converted by Recruiter Patron unless protected
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+
+          {/* Patron Roles */}
+          <div>
+            <div className="flex items-center justify-center mb-8">
+              <Target className="w-8 h-8 text-red-600 mr-3" />
+              <h3 className="text-3xl font-bold text-red-900">Patron Team</h3>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {patronRoles.map((role, index) => (
+                <Card key={index} className="hover:shadow-lg transition-all border-2 border-red-200 bg-white">
+                  <CardHeader className="text-center">
+                    <div className="flex justify-center mb-3">
+                      <div className="p-3 bg-red-100 rounded-full text-red-600">{role.icon}</div>
+                    </div>
+                    <CardTitle className="text-red-800">{role.name}</CardTitle>
+                    <CardDescription>{role.description}</CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="text-sm text-gray-600 bg-red-50 p-3 rounded">
+                      <strong>Special Rule:</strong> {role.ability}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+
+              {/* Regular Patrons */}
+              <Card className="hover:shadow-lg transition-all border-2 border-red-200 bg-white">
+                <CardHeader className="text-center">
+                  <div className="flex justify-center mb-3">
+                    <div className="p-3 bg-red-100 rounded-full text-red-600">
+                      <Users className="w-6 h-6" />
+                    </div>
+                  </div>
+                  <CardTitle className="text-red-800">Regular Patrons</CardTitle>
+                  <CardDescription>Collaborate with Leader to sabotage pools</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="text-sm text-gray-600 bg-red-50 p-3 rounded">
+                    <strong>Special Rule:</strong> Work together to choose sabotage targets strategically
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
 
           <div className="mt-12 text-center">
-            <p className="text-gray-600 mb-4">
-              Each role has unique abilities and strategic importance. Master them all to dominate the pool!
-            </p>
-            <Button className="bg-blue-600 hover:bg-blue-700">Download Full Rulebook</Button>
+            <p className="text-gray-600 mb-4">Roles scale with player count for balanced gameplay!</p>
+            <Badge variant="outline" className="text-lg px-4 py-2">
+              <Users className="w-4 h-4 mr-2" />
+              Recommended: 10-16 Players
+            </Badge>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-red-600 text-white">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Get notified about expansions, tournaments, and special events!
+          </p>
+          <div className="max-w-md mx-auto flex gap-4">
+            <Input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="bg-white text-gray-900"
+            />
+            <Button className="bg-white text-blue-600 hover:bg-blue-50">
+              <Mail className="w-4 h-4 mr-2" />
+              Subscribe
+            </Button>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-blue-900 text-white py-12 px-4">
-        <div className="container mx-auto max-w-6xl">
+      <footer id="contact" className="py-12 px-4 bg-gray-900 text-white">
+        <div className="container mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Waves className="h-6 w-6" />
-                <span className="text-xl font-bold">Guard Duty</span>
+                <Waves className="w-8 h-8 text-blue-400" />
+                <span className="text-2xl font-bold">Guard Duty</span>
               </div>
-              <p className="text-blue-200">
-                The ultimate social deduction game where summer fun meets strategic gameplay.
+              <p className="text-gray-400">
+                The ultimate social deduction game that brings summer fun to your game night.
               </p>
             </div>
+
             <div>
-              <h4 className="font-bold mb-4">Quick Links</h4>
-              <div className="space-y-2">
-                <Link href="#about" className="block text-blue-200 hover:text-white">
-                  About
-                </Link>
-                <Link href="#how-to-play" className="block text-blue-200 hover:text-white">
-                  How to Play
-                </Link>
-                <Link href="#roles" className="block text-blue-200 hover:text-white">
-                  Roles
-                </Link>
+              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+              <ul className="space-y-2 text-gray-400">
+                <li>
+                  <a href="#about" className="hover:text-white">
+                    About the Game
+                  </a>
+                </li>
+                <li>
+                  <a href="#how-to-play" className="hover:text-white">
+                    How to Play
+                  </a>
+                </li>
+                <li>
+                  <a href="#roles" className="hover:text-white">
+                    Meet the Roles
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="hover:text-white">
+                    Download Rules
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
+              <div className="flex space-x-4">
+                <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white">
+                  <Twitter className="w-5 h-5" />
+                </Button>
+                <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white">
+                  <Facebook className="w-5 h-5" />
+                </Button>
+                <Button variant="ghost" size="sm" className="text-gray-400 hover:text-white">
+                  <Github className="w-5 h-5" />
+                </Button>
               </div>
             </div>
-            <div>
-              <h4 className="font-bold mb-4">Stay Updated</h4>
-              <p className="text-blue-200 mb-4">Get notified about expansions and tournaments!</p>
-              <Button variant="outline" className="border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-blue-900">
-                Join Mailing List
-              </Button>
-            </div>
           </div>
-          <Separator className="my-8 bg-blue-700" />
-          <div className="text-center text-blue-200">
+
+          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; 2024 Guard Duty: Lifeguards vs. Patrons. All rights reserved.</p>
           </div>
         </div>
