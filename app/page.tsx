@@ -15,15 +15,15 @@ export default function GuardDutyWebsite() {
     {
       name: "Security",
       image: "/images/security.png",
-      description: "Learns a player's alignment each night",
-      ability: "Cannot target the same player on consecutive nights",
+      description: "Learns a player's role each night",
+      ability: "Knows which side that player is on",
       team: "lifeguard",
     },
     {
       name: "Camera Observer",
       image: "/images/camera-observer.png",
-      description: "Observes one pool to determine sabotage",
-      ability: "Cannot observe the same pool twice in a row",
+      description: "Observes one pool each night to determine sabotage",
+      ability: "Learns if that pool was sabotaged successfully",
       team: "lifeguard",
     },
     {
@@ -36,22 +36,29 @@ export default function GuardDutyWebsite() {
     {
       name: "Rescue Diver",
       image: "/images/rescue-diver.png",
-      description: "Gains elimination ability after first sabotage",
-      ability: "One-time use, unlocked after successful sabotage",
+      description: "Eliminate a player during the night, one-time use",
+      ability: "Ability unlocks after first successful sabotage",
       team: "lifeguard",
     },
     {
       name: "Supervisor",
       image: "/images/supervisor.png",
       description: "Learns if a player performed an action",
-      ability: "Detects sabotage, guard, or investigate actions",
+      ability: "Detects sabotage, protect, or investigate actions",
       team: "lifeguard",
     },
     {
       name: "Security Bodyguard",
       image: "/images/bodyguard.png",
       description: "Protects one player each night",
-      ability: "Prevents elimination or conversion",
+      ability: "Prevents elimination or conversion. Cannot protect the same player two nights in a row. Will be announced if protected player was attacked",
+      team: "lifeguard",
+    },
+    {
+      name: "Doctor",
+      image: "/images/doctor.png",
+      description: "Protects one player each night",
+      ability: "Prevents only elimination. Can protect the same player multiple nights in a row.",
       team: "lifeguard",
     },
   ]
@@ -83,6 +90,13 @@ export default function GuardDutyWebsite() {
       image: "/images/recruiter-patron.png",
       description: "Can convert the Sleeper Lifeguard",
       ability: "Once per game conversion attempt",
+      team: "patron",
+    },
+    {
+      name: "Tethered Patron",
+      image: "/images/tethered-patron.png",
+      description: "Each night chooses one player to tether",
+      ability: "If eliminated, the tethered player is eliminated too.",
       team: "patron",
     },
   ]
