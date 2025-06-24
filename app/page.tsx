@@ -389,9 +389,9 @@ export default function GuardDutyWebsite() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {lifeguardRoles.map((role, index) => (
                 <Card key={index} className="hover:shadow-lg transition-all border-2 border-blue-200 bg-white">
-                  <CardHeader className="text-center">
+                  <CardHeader className="text-center p-6">
                     <div className="flex justify-center mb-3">
-                      <div className="w-32 h-40 relative rounded-lg overflow-hidden">
+                      <div className="w-48 h-72 relative rounded-lg overflow-hidden shadow-md">
                         <Image
                           src={role.image || "/placeholder.svg"}
                           alt={role.name}
@@ -401,11 +401,11 @@ export default function GuardDutyWebsite() {
                         />
                       </div>
                     </div>
-                    <CardTitle className="text-blue-800">{role.name}</CardTitle>
-                    <CardDescription>{role.description}</CardDescription>
+                    <CardTitle className="text-blue-800 text-base leading-tight mb-2">{role.name}</CardTitle>
+                    <CardDescription className="text-sm">{role.description}</CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <div className="text-sm text-gray-600 bg-blue-50 p-3 rounded">
+                  <CardContent className="p-6 pt-0">
+                    <div className="text-xs text-gray-600 bg-blue-50 p-3 rounded">
                       <strong>Special Rule:</strong> {role.ability}
                     </div>
                   </CardContent>
@@ -414,9 +414,9 @@ export default function GuardDutyWebsite() {
 
               {/* Regular Lifeguards */}
               <Card className="hover:shadow-lg transition-all border-2 border-blue-200 bg-white">
-                <CardHeader className="text-center">
+                <CardHeader className="text-center p-6">
                   <div className="flex justify-center mb-3">
-                    <div className="w-32 h-40 relative rounded-lg overflow-hidden">
+                    <div className="w-48 h-72 relative rounded-lg overflow-hidden shadow-md">
                       <Image
                         src="/images/lifeguard.png"
                         alt="Regular Lifeguards"
@@ -426,11 +426,11 @@ export default function GuardDutyWebsite() {
                       />
                     </div>
                   </div>
-                  <CardTitle className="text-blue-800">Regular Lifeguards</CardTitle>
-                  <CardDescription>Guard pools each night from sabotage</CardDescription>
+                  <CardTitle className="text-blue-800 text-base leading-tight mb-2">Regular Lifeguards</CardTitle>
+                  <CardDescription className="text-sm">Guard pools each night from sabotage</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <div className="text-sm text-gray-600 bg-blue-50 p-3 rounded">
+                <CardContent className="p-6 pt-0">
+                  <div className="text-xs text-gray-600 bg-blue-50 p-3 rounded">
                     <strong>Special Rule:</strong> If a pool is left unguarded and sabotaged, sabotage succeeds
                   </div>
                 </CardContent>
@@ -438,9 +438,9 @@ export default function GuardDutyWebsite() {
 
               {/* Sleeper Lifeguard */}
               <Card className="hover:shadow-lg transition-all border-2 border-blue-200 bg-white">
-                <CardHeader className="text-center">
+                <CardHeader className="text-center p-6">
                   <div className="flex justify-center mb-3">
-                    <div className="w-32 h-40 relative rounded-lg overflow-hidden">
+                    <div className="w-48 h-72 relative rounded-lg overflow-hidden shadow-md">
                       <Image
                         src="/images/sleeper.png"
                         alt="Sleeper Lifeguard"
@@ -450,11 +450,11 @@ export default function GuardDutyWebsite() {
                       />
                     </div>
                   </div>
-                  <CardTitle className="text-blue-800">Sleeper Lifeguard</CardTitle>
-                  <CardDescription>No active ability but knows their role</CardDescription>
+                  <CardTitle className="text-blue-800 text-base leading-tight mb-2">Sleeper Lifeguard</CardTitle>
+                  <CardDescription className="text-sm">No active ability but knows their role</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <div className="text-sm text-gray-600 bg-blue-50 p-3 rounded">
+                <CardContent className="p-6 pt-0">
+                  <div className="text-xs text-gray-600 bg-blue-50 p-3 rounded">
                     <strong>Special Rule:</strong> Can be converted by Recruiter Patron unless protected
                   </div>
                 </CardContent>
@@ -471,9 +471,9 @@ export default function GuardDutyWebsite() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {patronRoles.map((role, index) => (
                 <Card key={index} className="hover:shadow-lg transition-all border-2 border-red-200 bg-white">
-                  <CardHeader className="text-center">
+                  <CardHeader className="text-center p-6">
                     <div className="flex justify-center mb-3">
-                      <div className="w-32 h-40 relative rounded-lg overflow-hidden">
+                      <div className="w-48 h-72 relative rounded-lg overflow-hidden shadow-md">
                         <Image
                           src={role.image || "/placeholder.svg"}
                           alt={role.name}
@@ -483,11 +483,11 @@ export default function GuardDutyWebsite() {
                         />
                       </div>
                     </div>
-                    <CardTitle className="text-red-800">{role.name}</CardTitle>
-                    <CardDescription>{role.description}</CardDescription>
+                    <CardTitle className="text-red-800 text-base leading-tight mb-2">{role.name}</CardTitle>
+                    <CardDescription className="text-sm">{role.description}</CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <div className="text-sm text-gray-600 bg-red-50 p-3 rounded">
+                  <CardContent className="p-6 pt-0">
+                    <div className="text-xs text-gray-600 bg-red-50 p-3 rounded">
                       <strong>Special Rule:</strong> {role.ability}
                     </div>
                   </CardContent>
@@ -496,9 +496,9 @@ export default function GuardDutyWebsite() {
 
               {/* Regular Patrons */}
               <Card className="hover:shadow-lg transition-all border-2 border-red-200 bg-white">
-                <CardHeader className="text-center">
+                <CardHeader className="text-center p-6">
                   <div className="flex justify-center mb-3">
-                    <div className="w-32 h-40 relative rounded-lg overflow-hidden">
+                    <div className="w-48 h-72 relative rounded-lg overflow-hidden shadow-md">
                       <Image
                         src="/images/regular-patron.png"
                         alt="Regular Patrons"
@@ -508,11 +508,11 @@ export default function GuardDutyWebsite() {
                       />
                     </div>
                   </div>
-                  <CardTitle className="text-red-800">Regular Patrons</CardTitle>
-                  <CardDescription>Collaborate with Leader to sabotage pools</CardDescription>
+                  <CardTitle className="text-red-800 text-base leading-tight mb-2">Regular Patrons</CardTitle>
+                  <CardDescription className="text-sm">Collaborate with Leader to sabotage pools</CardDescription>
                 </CardHeader>
-                <CardContent>
-                  <div className="text-sm text-gray-600 bg-red-50 p-3 rounded">
+                <CardContent className="p-6 pt-0">
+                  <div className="text-xs text-gray-600 bg-red-50 p-3 rounded">
                     <strong>Special Rule:</strong> Work together to choose sabotage targets strategically
                   </div>
                 </CardContent>
