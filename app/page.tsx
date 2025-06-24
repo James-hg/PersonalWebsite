@@ -5,27 +5,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
-import {
-  Shield,
-  Eye,
-  Megaphone,
-  Heart,
-  Search,
-  Users,
-  ShieldCheck,
-  Crown,
-  Volume2,
-  UserCheck,
-  UserPlus,
-  Waves,
-  Sun,
-  Timer,
-  Target,
-  Mail,
-  Github,
-  Twitter,
-  Facebook,
-} from "lucide-react"
+import Image from "next/image"
+import { Shield, Users, Waves, Sun, Timer, Target, Mail, Github, Twitter, Facebook } from "lucide-react"
 
 export default function GuardDutyWebsite() {
   const [email, setEmail] = useState("")
@@ -33,42 +14,42 @@ export default function GuardDutyWebsite() {
   const lifeguardRoles = [
     {
       name: "Security",
-      icon: <Search className="w-6 h-6" />,
+      image: "/images/security.png",
       description: "Learns a player's alignment each night",
       ability: "Cannot target the same player on consecutive nights",
       team: "lifeguard",
     },
     {
       name: "Camera Observer",
-      icon: <Eye className="w-6 h-6" />,
+      image: "/images/camera-observer.png",
       description: "Observes one pool to determine sabotage",
       ability: "Cannot observe the same pool twice in a row",
       team: "lifeguard",
     },
     {
       name: "Whistle Marshal",
-      icon: <Megaphone className="w-6 h-6" />,
+      image: "/images/whistle-marshal.png",
       description: "Silences one player per night",
       ability: "Silenced players cannot make any actions",
       team: "lifeguard",
     },
     {
       name: "Rescue Diver",
-      icon: <Heart className="w-6 h-6" />,
+      image: "/images/rescue-diver.png",
       description: "Gains elimination ability after first sabotage",
       ability: "One-time use, unlocked after successful sabotage",
       team: "lifeguard",
     },
     {
       name: "Supervisor",
-      icon: <Shield className="w-6 h-6" />,
+      image: "/images/supervisor.png",
       description: "Learns if a player performed an action",
       ability: "Detects sabotage, guard, or investigate actions",
       team: "lifeguard",
     },
     {
       name: "Security Bodyguard",
-      icon: <ShieldCheck className="w-6 h-6" />,
+      image: "/images/bodyguard.png",
       description: "Protects one player each night",
       ability: "Prevents elimination or conversion",
       team: "lifeguard",
@@ -78,70 +59,31 @@ export default function GuardDutyWebsite() {
   const patronRoles = [
     {
       name: "Leader Patron",
-      icon: <Crown className="w-6 h-6" />,
+      image: "/images/leader-patron.png",
       description: "Chooses pools to sabotage and targets to eliminate",
       ability: "Eliminates target if sabotage succeeds",
       team: "patron",
     },
     {
       name: "Disruptor Patron",
-      icon: <Volume2 className="w-6 h-6" />,
+      image: "/images/disruptor-patron.png",
       description: "Mutes a player for the next day",
       ability: "Target cannot speak or defend themselves",
       team: "patron",
     },
     {
       name: "Chameleon Patron",
-      icon: <UserCheck className="w-6 h-6" />,
+      image: "/images/chameleon-patron.png",
       description: "Appears as Lifeguard when investigated",
       ability: "Fools Security investigations",
       team: "patron",
     },
     {
       name: "Recruiter Patron",
-      icon: <UserPlus className="w-6 h-6" />,
+      image: "/images/recruiter-patron.png",
       description: "Can convert the Sleeper Lifeguard",
       ability: "Once per game conversion attempt",
       team: "patron",
-    },
-  ]
-
-  const gameplaySteps = [
-    {
-      phase: "Night Phase",
-      icon: <Timer className="w-8 h-8" />,
-      description: "All players close their eyes. Narrator calls roles to act in order.",
-      details: [
-        "Leader Patron targets a player",
-        "Disruptor Patron chooses player to mute",
-        "Recruiter Patron attempts conversion",
-        "All Patrons confirm sabotage target",
-        "Lifeguards assign pool guards",
-        "Special roles use their abilities",
-      ],
-    },
-    {
-      phase: "Results Phase",
-      icon: <Target className="w-8 h-8" />,
-      description: "Narrator reveals outcomes of night actions.",
-      details: [
-        "Eliminated players announced",
-        "Winning conditions checked",
-        "Muted players revealed",
-        "Sabotage results shared",
-      ],
-    },
-    {
-      phase: "Discussion Phase",
-      icon: <Users className="w-8 h-8" />,
-      description: "Players discuss, vote, and potentially eliminate suspects.",
-      details: [
-        "30-60 seconds of open discussion",
-        "Vote for elimination candidate",
-        "Accused player gets 30-60 seconds to defend",
-        "Final elimination vote",
-        "Check winning conditions",
-      ],
     },
   ]
 
@@ -449,7 +391,15 @@ export default function GuardDutyWebsite() {
                 <Card key={index} className="hover:shadow-lg transition-all border-2 border-blue-200 bg-white">
                   <CardHeader className="text-center">
                     <div className="flex justify-center mb-3">
-                      <div className="p-3 bg-blue-100 rounded-full text-blue-600">{role.icon}</div>
+                      <div className="w-32 h-40 relative rounded-lg overflow-hidden">
+                        <Image
+                          src={role.image || "/placeholder.svg"}
+                          alt={role.name}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                      </div>
                     </div>
                     <CardTitle className="text-blue-800">{role.name}</CardTitle>
                     <CardDescription>{role.description}</CardDescription>
@@ -466,8 +416,14 @@ export default function GuardDutyWebsite() {
               <Card className="hover:shadow-lg transition-all border-2 border-blue-200 bg-white">
                 <CardHeader className="text-center">
                   <div className="flex justify-center mb-3">
-                    <div className="p-3 bg-blue-100 rounded-full text-blue-600">
-                      <Users className="w-6 h-6" />
+                    <div className="w-32 h-40 relative rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/lifeguard.png"
+                        alt="Regular Lifeguards"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
                     </div>
                   </div>
                   <CardTitle className="text-blue-800">Regular Lifeguards</CardTitle>
@@ -484,8 +440,14 @@ export default function GuardDutyWebsite() {
               <Card className="hover:shadow-lg transition-all border-2 border-blue-200 bg-white">
                 <CardHeader className="text-center">
                   <div className="flex justify-center mb-3">
-                    <div className="p-3 bg-blue-100 rounded-full text-blue-600">
-                      <Eye className="w-6 h-6" />
+                    <div className="w-32 h-40 relative rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/sleeper.png"
+                        alt="Sleeper Lifeguard"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
                     </div>
                   </div>
                   <CardTitle className="text-blue-800">Sleeper Lifeguard</CardTitle>
@@ -511,7 +473,15 @@ export default function GuardDutyWebsite() {
                 <Card key={index} className="hover:shadow-lg transition-all border-2 border-red-200 bg-white">
                   <CardHeader className="text-center">
                     <div className="flex justify-center mb-3">
-                      <div className="p-3 bg-red-100 rounded-full text-red-600">{role.icon}</div>
+                      <div className="w-32 h-40 relative rounded-lg overflow-hidden">
+                        <Image
+                          src={role.image || "/placeholder.svg"}
+                          alt={role.name}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                      </div>
                     </div>
                     <CardTitle className="text-red-800">{role.name}</CardTitle>
                     <CardDescription>{role.description}</CardDescription>
@@ -528,8 +498,14 @@ export default function GuardDutyWebsite() {
               <Card className="hover:shadow-lg transition-all border-2 border-red-200 bg-white">
                 <CardHeader className="text-center">
                   <div className="flex justify-center mb-3">
-                    <div className="p-3 bg-red-100 rounded-full text-red-600">
-                      <Users className="w-6 h-6" />
+                    <div className="w-32 h-40 relative rounded-lg overflow-hidden">
+                      <Image
+                        src="/images/regular-patron.png"
+                        alt="Regular Patrons"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
                     </div>
                   </div>
                   <CardTitle className="text-red-800">Regular Patrons</CardTitle>
