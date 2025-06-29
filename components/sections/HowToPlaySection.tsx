@@ -189,6 +189,15 @@ export default function HowToPlaySection() {
                     </Card>
                 </div>
             </div>
+            <div className="text-center mt-12">
+                <a
+                    href="/rulebook/Guard_Duty_Rule_Book.pdf"
+                    target="_blank"
+                    className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg shadow-lg transition"
+                >
+                    Download the Rule Book
+                </a>
+            </div>
         </section>
     );
 }
