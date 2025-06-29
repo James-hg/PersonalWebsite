@@ -4,7 +4,6 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
 import Image from "next/image"
 import { Shield, Users, Waves, Sun, Timer, Target, Mail, Github, Twitter, Facebook } from "lucide-react"
 
@@ -133,34 +132,58 @@ export default function GuardDutyWebsite() {
       {/* Hero Section */}
       <section
         id="home"
-        className="relative py-20 px-4 text-center bg-gradient-to-r from-blue-600 to-red-600 text-white overflow-hidden"
+        className="relative text-center text-white overflow-hidden min-h-[70vh] flex items-center w-full"
+        style={{
+          backgroundImage: "url('/images/banner.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
+          backgroundRepeat: "no-repeat",
+        }}
       >
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative z-10 container mx-auto">
-          <div className="flex items-center justify-center mb-6">
-            <Sun className="w-12 h-12 mr-4 text-yellow-300" />
-            <h1 className="text-5xl md:text-7xl font-bold">Guard Duty</h1>
-            <Waves className="w-12 h-12 ml-4 text-blue-300" />
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="relative z-10 w-full px-4">
+          <div className="container mx-auto">
+            <div className="flex items-center justify-center mb-6">
+              <Sun className="w-12 h-12 mr-4 text-yellow-300" />
+              <h1 className="text-5xl md:text-7xl font-bold text-white drop-shadow-lg">Guard Duty</h1>
+              <Waves className="w-12 h-12 ml-4 text-blue-300" />
+            </div>
+            <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-yellow-300 drop-shadow-md">
+              Lifeguards vs. Patrons
+            </h2>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto drop-shadow-md">
+              A hidden-role, social deduction game!
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <Badge
+                variant="secondary"
+                className="text-lg px-4 py-2 bg-white/20 text-white border-white/30 backdrop-blur-sm"
+              >
+                Hidden Roles
+              </Badge>
+              <Badge
+                variant="secondary"
+                className="text-lg px-4 py-2 bg-white/20 text-white border-white/30 backdrop-blur-sm"
+              >
+                Social Deduction
+              </Badge>
+              <Badge
+                variant="secondary"
+                className="text-lg px-4 py-2 bg-white/20 text-white border-white/30 backdrop-blur-sm"
+              >
+                Team Strategy
+              </Badge>
+              <Badge
+                variant="secondary"
+                className="text-lg px-4 py-2 bg-white/20 text-white border-white/30 backdrop-blur-sm"
+              >
+                10+ Players
+              </Badge>
+            </div>
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-3 shadow-lg">
+              Learn to Play
+            </Button>
           </div>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-4">Lifeguards vs. Patrons</h2>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Where strategy meets summer fun!</p>
-          <div className="flex flex-wrap justify-center gap-4 mb-8">
-            <Badge variant="secondary" className="text-lg px-4 py-2 bg-white/20 text-white border-white/30">
-              Hidden Roles
-            </Badge>
-            <Badge variant="secondary" className="text-lg px-4 py-2 bg-white/20 text-white border-white/30">
-              Social Deduction
-            </Badge>
-            <Badge variant="secondary" className="text-lg px-4 py-2 bg-white/20 text-white border-white/30">
-              Team Strategy
-            </Badge>
-            <Badge variant="secondary" className="text-lg px-4 py-2 bg-white/20 text-white border-white/30">
-              10+ Players
-            </Badge>
-          </div>
-          <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-3">
-            Learn to Play
-          </Button>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
       </section>
@@ -303,7 +326,7 @@ export default function GuardDutyWebsite() {
               <h3 className="text-3xl font-bold text-center mb-8">Night Action Order</h3>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="text-xl font-bold text-red-600 mb-6">Patron Actions (1-4)</h4>
+                  <h4 className="text-xl font-bold text-red-600 mb-6">Patron Actions (1-5)</h4>
                   <div className="space-y-3">
                     <div className="flex items-start">
                       <span className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
@@ -329,10 +352,16 @@ export default function GuardDutyWebsite() {
                       </span>
                       <span className="text-gray-700">All Patrons - Confirm Sabotage</span>
                     </div>
+                    <div className="flex items-start">
+                      <span className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
+                        5
+                      </span>
+                      <span className="text-gray-700">Tethered Patron - Choose Tether Target</span>
+                    </div>
                   </div>
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-blue-600 mb-6">Lifeguard Actions (5-11)</h4>
+                  <h4 className="text-xl font-bold text-blue-600 mb-6">Lifeguard Actions (5-12)</h4>
                   <div className="space-y-3">
                     <div className="flex items-start">
                       <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
@@ -375,6 +404,12 @@ export default function GuardDutyWebsite() {
                         11
                       </span>
                       <span className="text-gray-700">Camera Observer - Observe Pool</span>
+                    </div>
+                    <div className="flex items-start">
+                      <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
+                        12
+                      </span>
+                      <span className="text-gray-700">Doctor - Protect Player</span>
                     </div>
                   </div>
                 </div>
