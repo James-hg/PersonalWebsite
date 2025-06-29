@@ -11,17 +11,16 @@ export default function ContributionSection() {
                 </p>
                 <ul className="space-y-4 text-left max-w-xl mx-auto">
                     <li>
-                        <strong>Jane Doe</strong>: 40% – Lead game designer,
-                        core mechanics, prototype document.
+                        <strong>James Hoang</strong>: 69% – lol idk.
                     </li>
-                    <li>
+                    {/* <li>
                         <strong>John Smith</strong>: 30% – Website development,
                         visuals, and component illustrations.
                     </li>
                     <li>
                         <strong>Alice Lee</strong>: 30% – Playtesting,
                         documentation logs, and game balance analysis.
-                    </li>
+                    </li> */}
                 </ul>
             </div>
         </section>

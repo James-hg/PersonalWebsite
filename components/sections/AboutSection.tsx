@@ -26,7 +26,7 @@ export default function AboutSection() {
                 </div>
 
                 {/* Inspiration */}
-                <div className="w-full mb-16 text-left bg-white border-2 border-blue-200 p-8 rounded-lg shadow">
+                <div className="w-full mb-16 text-left max-w-4xl mx-auto text-center">
                     <h3 className="text-3xl font-bold text-blue-900 mb-4 text-center">
                         Inspiration
                     </h3>

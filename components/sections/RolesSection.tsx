@@ -104,6 +104,46 @@ export default function RolesSection() {
                     </p>
                 </div>
 
+                {/* Narrator Role */}
+                <div className="mb-16">
+                    <div className="flex items-center justify-center mb-8">
+                        <h3 className="text-3xl font-bold text-gray-800">
+                            Narrator
+                        </h3>
+                    </div>
+                    <div className="flex justify-center">
+                        <Card className="hover:shadow-lg transition-all border-2 border-gray-300 bg-white max-w-sm">
+                            <CardHeader className="text-center p-6">
+                                <div className="flex justify-center mb-3">
+                                    <div className="w-48 h-72 relative rounded-lg overflow-hidden shadow-md">
+                                        <Image
+                                            src="/images/narrator.png" // Your generated image path
+                                            alt="Narrator"
+                                            fill
+                                            className="object-cover"
+                                        />
+                                    </div>
+                                </div>
+                                <CardTitle className="text-gray-800 text-base leading-tight mb-2">
+                                    Narrator
+                                </CardTitle>
+                                <CardDescription className="text-sm">
+                                    Guides the game flow, calls role actions,
+                                    and enforces rules without taking a side.
+                                </CardDescription>
+                            </CardHeader>
+                            <CardContent className="p-6 pt-0">
+                                <div className="text-xs text-gray-600 bg-gray-50 p-3 rounded">
+                                    <strong>Special Rule:</strong> The Narrator
+                                    must remain neutral, keep all night actions
+                                    secret, and announce results clearly each
+                                    round.
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </div>
+
                 {/* Lifeguard Roles */}
                 <div className="mb-16">
                     <div className="flex items-center justify-center mb-8">
