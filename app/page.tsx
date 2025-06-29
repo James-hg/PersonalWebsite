@@ -4,7 +4,7 @@ import AboutSection from "@/components/sections/AboutSection";
 import BackstorySection from "@/components/sections/BackStorySection";
 import HowToPlaySection from "@/components/sections/HowToPlaySection";
 import RolesSection from "@/components/sections/RolesSection";
-import Footer from "@/components/sections/Footer";
+// import Footer from "@/components/sections/Footer";
 import TrailerSection from "@/components/sections/TrailerSection";
 import DocumentationSection from "@/components/sections/DocumentationSection";
 import TimingSection from "@/components/sections/TimingSection";
@@ -23,7 +23,7 @@ export default function GuardDutyWebsite() {
             <DocumentationSection />
             <TimingSection />
             <ContributionSection />
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 }

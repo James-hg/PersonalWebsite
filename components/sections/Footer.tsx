@@ -1,12 +1,12 @@
 "use client";
-import { Waves, Twitter, Facebook, Github } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Waves } from "lucide-react";
 
 export default function Footer() {
     return (
-        <footer id="contact" className="py-12 px-4 bg-gray-900 text-white">
+        <footer className="py-12 px-4 bg-gray-900 text-white">
             <div className="container mx-auto">
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 gap-8">
+                    {/* Left: Branding */}
                     <div>
                         <div className="flex items-center space-x-2 mb-4">
                             <Waves className="w-8 h-8 text-blue-400" />
@@ -15,19 +15,43 @@ export default function Footer() {
                             </span>
                         </div>
                         <p className="text-gray-400">
-                            The ultimate social deduction game that brings
-                            summer fun to your game night.
+                            A thrilling social deduction game where lifeguards
+                            defend the pool against cunning saboteurs.
                         </p>
                     </div>
 
+                    {/* Center: Quick Links */}
                     <div>
                         <h3 className="text-lg font-semibold mb-4">
                             Quick Links
                         </h3>
                         <ul className="space-y-2 text-gray-400">
                             <li>
+                                <a href="#home" className="hover:text-white">
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#trailer" className="hover:text-white">
+                                    Trailer
+                                </a>
+                            </li>
+                            <li>
                                 <a href="#about" className="hover:text-white">
-                                    About the Game
+                                    About
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#backstory"
+                                    className="hover:text-white"
+                                >
+                                    Backstory
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#roles" className="hover:text-white">
+                                    Roles
                                 </a>
                             </li>
                             <li>
@@ -39,52 +63,36 @@ export default function Footer() {
                                 </a>
                             </li>
                             <li>
-                                <a href="#roles" className="hover:text-white">
-                                    Meet the Roles
+                                <a
+                                    href="#documentation"
+                                    className="hover:text-white"
+                                >
+                                    Docs
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="hover:text-white">
-                                    Download Rules
+                                <a
+                                    href="#quantitative-analysis"
+                                    className="hover:text-white"
+                                >
+                                    Analysis
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#gameplay-insights"
+                                    className="hover:text-white"
+                                >
+                                    Insights
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#team" className="hover:text-white">
+                                    Team
                                 </a>
                             </li>
                         </ul>
                     </div>
-
-                    <div>
-                        <h3 className="text-lg font-semibold mb-4">
-                            Connect With Us
-                        </h3>
-                        <div className="flex space-x-4">
-                            <Button
-                                variant="ghost"
-                                size="sm"
-                                className="text-gray-400 hover:text-white"
-                            >
-                                <Twitter className="w-5 h-5" />
-                            </Button>
-                            <Button
-                                variant="ghost"
-                                size="sm"
-                                className="text-gray-400 hover:text-white"
-                            >
-                                <Facebook className="w-5 h-5" />
-                            </Button>
-                            <Button
-                                variant="ghost"
-                                size="sm"
-                                className="text-gray-400 hover:text-white"
-                            >
-                                <Github className="w-5 h-5" />
-                            </Button>
-                        </div>
-                    </div>
-                </div>
-                <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                    <p>
-                        &copy; 2024 Guard Duty: Lifeguards vs. Patrons. All
-                        rights reserved.
-                    </p>
                 </div>
             </div>
         </footer>
