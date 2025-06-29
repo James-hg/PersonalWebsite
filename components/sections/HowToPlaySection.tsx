@@ -89,47 +89,25 @@ export default function HowToPlaySection() {
                                     Patron Actions (1-5)
                                 </h4>
                                 <div className="space-y-3">
-                                    <div className="flex items-start">
-                                        <span className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
-                                            1
-                                        </span>
-                                        <span className="text-gray-700">
-                                            Leader Patron - Target Player
-                                        </span>
-                                    </div>
-                                    <div className="flex items-start">
-                                        <span className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
-                                            2
-                                        </span>
-                                        <span className="text-gray-700">
-                                            Disruptor Patron - Mute Player
-                                        </span>
-                                    </div>
-                                    <div className="flex items-start">
-                                        <span className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
-                                            3
-                                        </span>
-                                        <span className="text-gray-700">
-                                            Recruiter Patron - Convert Attempt
-                                        </span>
-                                    </div>
-                                    <div className="flex items-start">
-                                        <span className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
-                                            4
-                                        </span>
-                                        <span className="text-gray-700">
-                                            All Patrons - Confirm Sabotage
-                                        </span>
-                                    </div>
-                                    <div className="flex items-start">
-                                        <span className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
-                                            5
-                                        </span>
-                                        <span className="text-gray-700">
-                                            Tethered Patron - Choose Tether
-                                            Target
-                                        </span>
-                                    </div>
+                                    {[
+                                        "Leader Patron - Target Player",
+                                        "Disruptor Patron - Mute Player",
+                                        "Recruiter Patron - Convert Attempt",
+                                        "All Patrons - Confirm Sabotage",
+                                        "Tethered Patron - Choose Tether Target",
+                                    ].map((text, index) => (
+                                        <div
+                                            key={index}
+                                            className="flex items-start"
+                                        >
+                                            <span className="w-6 h-6 bg-red-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
+                                                {index + 1}
+                                            </span>
+                                            <span className="text-gray-700">
+                                                {text}
+                                            </span>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                             <div>
@@ -137,74 +115,77 @@ export default function HowToPlaySection() {
                                     Lifeguard Actions (5-12)
                                 </h4>
                                 <div className="space-y-3">
-                                    <div className="flex items-start">
-                                        <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
-                                            5
-                                        </span>
-                                        <span className="text-gray-700">
-                                            Whistle Marshal - Silence Player
-                                        </span>
-                                    </div>
-                                    <div className="flex items-start">
-                                        <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
-                                            6
-                                        </span>
-                                        <span className="text-gray-700">
-                                            Rescue Diver - Eliminate (if
-                                            unlocked)
-                                        </span>
-                                    </div>
-                                    <div className="flex items-start">
-                                        <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
-                                            7
-                                        </span>
-                                        <span className="text-gray-700">
-                                            Lifeguards - Assign Pool Guards
-                                        </span>
-                                    </div>
-                                    <div className="flex items-start">
-                                        <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
-                                            8
-                                        </span>
-                                        <span className="text-gray-700">
-                                            Supervisor - Learn Player Action
-                                        </span>
-                                    </div>
-                                    <div className="flex items-start">
-                                        <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
-                                            9
-                                        </span>
-                                        <span className="text-gray-700">
-                                            Security - Learn Alignment
-                                        </span>
-                                    </div>
-                                    <div className="flex items-start">
-                                        <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
-                                            10
-                                        </span>
-                                        <span className="text-gray-700">
-                                            Security Bodyguard - Protect Player
-                                        </span>
-                                    </div>
-                                    <div className="flex items-start">
-                                        <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
-                                            11
-                                        </span>
-                                        <span className="text-gray-700">
-                                            Camera Observer - Observe Pool
-                                        </span>
-                                    </div>
-                                    <div className="flex items-start">
-                                        <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
-                                            12
-                                        </span>
-                                        <span className="text-gray-700">
-                                            Doctor - Protect Player
-                                        </span>
-                                    </div>
+                                    {[
+                                        "Whistle Marshal - Silence Player",
+                                        "Rescue Diver - Eliminate (if unlocked)",
+                                        "Lifeguards - Assign Pool Guards",
+                                        "Supervisor - Learn Player Action",
+                                        "Security - Learn Alignment",
+                                        "Security Bodyguard - Protect Player",
+                                        "Camera Observer - Observe Pool",
+                                        "Doctor - Protect Player",
+                                    ].map((text, index) => (
+                                        <div
+                                            key={index}
+                                            className="flex items-start"
+                                        >
+                                            <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
+                                                {index + 5}
+                                            </span>
+                                            <span className="text-gray-700">
+                                                {text}
+                                            </span>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
                         </div>
+                    </Card>
+                </div>
+
+                {/* Night Phase Notes */}
+                <div className="mt-12">
+                    <Card className="p-8 bg-white border-2 border-gray-200">
+                        <h3 className="text-3xl font-bold text-center mb-8">
+                            Night Phase Notes
+                        </h3>
+                        <ul className="text-gray-700 text-lg list-disc list-inside space-y-2 text-left">
+                            <li>
+                                Patrons wake together; keep eyes open until all
+                                Patron roles finish.
+                            </li>
+                            <li>
+                                Lifeguards wake one at a time in
+                                Narrator-assigned order.
+                            </li>
+                            <li>
+                                Recommended gestures:
+                                <ul className="list-disc list-inside pl-5 space-y-1">
+                                    <li>Point to choose a player.</li>
+                                    <li>
+                                        Patrons display pool numbers with
+                                        fingers; Leader Patron shows final
+                                        choice.
+                                    </li>
+                                    <li>
+                                        Rescue Diver: Narrator shows an X if
+                                        ability is locked.
+                                    </li>
+                                    <li>
+                                        Supervisor: thumbs up for action, thumbs
+                                        down for none.
+                                    </li>
+                                    <li>
+                                        Security: thumbs up for Lifeguard team,
+                                        thumbs down for Patron team.
+                                    </li>
+                                    <li>
+                                        Camera Observer: thumbs up if pool
+                                        sabotaged, thumbs down if not.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </Card>
                 </div>
             </div>

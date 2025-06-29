@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components/ui/button";
+
 import { Badge } from "@/components/ui/badge";
 import { Sun, Waves } from "lucide-react";
 
@@ -45,12 +45,6 @@ export default function HeroSection() {
                             10+ Players
                         </Badge>
                     </div>
-                    <Button
-                        size="lg"
-                        className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-3 shadow-lg"
-                    >
-                        Learn to Play
-                    </Button>
                 </div>
             </div>
             <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-white to-transparent"></div>
