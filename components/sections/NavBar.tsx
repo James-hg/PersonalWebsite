@@ -38,16 +38,16 @@ export default function NavBar() {
                         Backstory
                     </Link> */}
                     <Link
-                        href="#roles"
-                        className="text-blue-700 hover:text-blue-900 font-medium"
-                    >
-                        Roles
-                    </Link>
-                    <Link
                         href="#how-to-play"
                         className="text-blue-700 hover:text-blue-900 font-medium"
                     >
                         How to Play
+                    </Link>
+                    <Link
+                        href="#roles"
+                        className="text-blue-700 hover:text-blue-900 font-medium"
+                    >
+                        Roles
                     </Link>
                     <Link
                         href="#documentation"
