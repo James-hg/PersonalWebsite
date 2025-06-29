@@ -9,8 +9,6 @@ import Image from "next/image"
 import { Shield, Users, Waves, Sun, Timer, Target, Mail, Github, Twitter, Facebook } from "lucide-react"
 
 export default function GuardDutyWebsite() {
-  const [email, setEmail] = useState("")
-
   const lifeguardRoles = [
     {
       name: "Security",
@@ -540,29 +538,6 @@ export default function GuardDutyWebsite() {
               <Users className="w-4 h-4 mr-2" />
               Recommended: 10-16 Players
             </Badge>
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-red-600 text-white">
-        <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Get notified about expansions, tournaments, and special events!
-          </p>
-          <div className="max-w-md mx-auto flex gap-4">
-            <Input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="bg-white text-gray-900"
-            />
-            <Button className="bg-white text-blue-600 hover:bg-blue-50">
-              <Mail className="w-4 h-4 mr-2" />
-              Subscribe
-            </Button>
           </div>
         </div>
       </section>
