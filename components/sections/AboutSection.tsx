@@ -26,7 +26,7 @@ export default function AboutSection() {
                 </div>
 
                 {/* Inspiration */}
-                <div className="w-full mb-16 text-left max-w-4xl mx-auto text-center">
+                <div className="w-full mb-16 max-w-4xl mx-auto text-center">
                     <h3 className="text-3xl font-bold text-blue-900 mb-4 text-center">
                         Inspiration
                     </h3>
@@ -51,6 +51,9 @@ export default function AboutSection() {
                 </div>
 
                 {/* Three Pillars */}
+                <h3 className="text-3xl font-bold text-blue-900 mb-4 text-center">
+                    Three Game Pillars
+                </h3>
                 <div className="grid md:grid-cols-3 gap-8 mb-16">
                     <Card className="text-center p-8 bg-white border-2 border-gray-200">
                         <div className="flex justify-center mb-4">
@@ -95,7 +98,7 @@ export default function AboutSection() {
                 </div>
 
                 {/* Original About Section Pillars */}
-                <div className="grid md:grid-cols-3 gap-8 mb-16">
+                {/* <div className="grid md:grid-cols-3 gap-8 mb-16">
                     <Card className="text-center p-8 bg-white border-2 border-gray-200">
                         <div className="flex justify-center mb-4">
                             <Users className="w-16 h-16 text-blue-600" />
@@ -130,7 +133,7 @@ export default function AboutSection() {
                             discussion
                         </p>
                     </Card>
-                </div>
+                </div> */}
             </div>
         </section>
     );

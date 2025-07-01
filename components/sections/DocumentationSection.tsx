@@ -9,16 +9,19 @@ export default function DocumentationSection() {
                     {[
                         {
                             name: "Group Meeting Log",
-                            file: "/docs/group-log.pdf",
+                            file: "SampleMeetingLog.pdf",
                         },
                         {
                             name: "Playtesting Log",
-                            file: "/docs/playtesting-log.pdf",
+                            file: "TestingLog.pdf",
                         },
-                        { name: "Flowcharts", file: "/docs/flowcharts.pdf" },
+                        {
+                            name: "Flowcharts",
+                            file: "GuardDutyFlowchart.pdf",
+                        },
                         {
                             name: "Quantitative Analysis",
-                            file: "/docs/quantitative-analysis.pdf",
+                            file: "SampleAnalysis.pdf",
                         },
                     ].map((doc, i) => (
                         <a

@@ -112,7 +112,7 @@ export default function HowToPlaySection() {
                             </div>
                             <div>
                                 <h4 className="text-xl font-bold text-blue-600 mb-6">
-                                    Lifeguard Actions (5-12)
+                                    Lifeguard Actions (6-12)
                                 </h4>
                                 <div className="space-y-3">
                                     {[
@@ -130,7 +130,7 @@ export default function HowToPlaySection() {
                                             className="flex items-start"
                                         >
                                             <span className="w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">
-                                                {index + 5}
+                                                {index + 6}
                                             </span>
                                             <span className="text-gray-700">
                                                 {text}
@@ -184,6 +184,25 @@ export default function HowToPlaySection() {
                                         sabotaged, thumbs down if not.
                                     </li>
                                 </ul>
+                            </li>
+                        </ul>
+                    </Card>
+                </div>
+                <div className="mt-12">
+                    <Card className="p-8 bg-green-50 border-2 border-green-200">
+                        <h3 className="text-3xl font-bold text-center mb-8 text-green-900">
+                            Winning Conditions
+                        </h3>
+                        <ul className="text-gray-700 text-lg list-disc list-inside space-y-2 text-left">
+                            <li>
+                                <strong>Lifeguards win:</strong> All Patrons are
+                                eliminated or they survive the required number
+                                of rounds without sabotage success.
+                            </li>
+                            <li>
+                                <strong>Patrons win:</strong> Patrons equal or
+                                outnumber Lifeguards, or they sabotage pools
+                                successfully for the set number of rounds.
                             </li>
                         </ul>
                     </Card>
