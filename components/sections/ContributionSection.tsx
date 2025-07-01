@@ -11,7 +11,25 @@ export default function ContributionSection() {
                 </p>
                 <ul className="space-y-4 text-left max-w-xl mx-auto">
                     <li>
-                        <strong>James Hoang</strong>: 69% – lol idk.
+                        <strong>Kylie Wawryk</strong>: - .
+                    </li>
+                    <li>
+                        <strong>Dami Kim</strong>: - .
+                    </li>
+                    <li>
+                        <strong>James Hoang</strong>: - .
+                    </li>
+                    <li>
+                        <strong>Joshua Weekes</strong>: - .
+                    </li>
+                    <li>
+                        <strong>Jamal Asmi</strong>: - .
+                    </li>
+                    <p>Example:</p>
+                    <li>
+                        <strong>James Hoang</strong>: 69% - e.g. Website
+                        development, Rule Book, Play Testing + Log, Game
+                        Dynamics & Gameplay.
                     </li>
                     {/* <li>
                         <strong>John Smith</strong>: 30% – Website development,
