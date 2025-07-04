@@ -29,7 +29,8 @@ export default function HeroSection() {
                         Lifeguards vs. Patrons
                     </h2>
                     <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto drop-shadow-md">
-                        A hidden-role, social deduction game!
+                        Lifeguards protect, Patrons sabotage. Only one side will
+                        rule the pool.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4 mb-8">
                         <Badge className="text-lg px-4 py-2 bg-white/20 text-white border-white/30 backdrop-blur-sm">
