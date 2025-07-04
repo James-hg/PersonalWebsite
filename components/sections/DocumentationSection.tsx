@@ -17,7 +17,7 @@ export default function DocumentationSection() {
                         },
                         {
                             name: "Flowcharts",
-                            file: "GuardDutyFlowchart.pdf",
+                            file: "Flowchart.pdf",
                         },
                         {
                             name: "Quantitative Analysis",
