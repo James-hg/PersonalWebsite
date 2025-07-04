@@ -21,7 +21,7 @@ export default function DocumentationSection() {
                         },
                         {
                             name: "Quantitative Analysis",
-                            file: "SampleAnalysis.pdf",
+                            file: "Analysis.pdf",
                         },
                     ].map((doc, i) => (
                         <a
