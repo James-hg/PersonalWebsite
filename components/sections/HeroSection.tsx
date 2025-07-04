@@ -28,7 +28,7 @@ export default function HeroSection() {
                     <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-yellow-300 drop-shadow-md">
                         Lifeguards vs. Patrons
                     </h2>
-                    <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto drop-shadow-md">
+                    <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto drop-shadow-md">
                         Lifeguards protect, Patrons sabotage. Only one side will
                         rule the pool.
                     </p>
