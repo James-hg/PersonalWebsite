@@ -326,7 +326,7 @@ export default function RolesSection() {
                         </p>
                         <Badge variant="outline" className="text-lg px-4 py-2">
                             <Users className="w-4 h-4 mr-2" />
-                            Recommended: 10-20 Players
+                            Recommended: 10+ Players
                         </Badge>
                     </div>
                 </div>
