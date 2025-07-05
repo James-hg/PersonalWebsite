@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 
 export default function HowToPlaySection() {
     return (
-        <section id="how-to-play" className="py-16 px-4">
+        <section id="how-to-play" className="py-16 px4 bg-slate-100">
             <div className="container mx-auto">
                 <div className="text-center mb-12">
                     <h2 className="text-4xl font-bold text-blue-900 mb-12">
@@ -13,7 +13,7 @@ export default function HowToPlaySection() {
 
                 {/* Phase Cards */}
                 <div className="grid md:grid-cols-3 gap-8 mb-12">
-                    <Card className="p-8 bg-blue-50 border-2 border-blue-200">
+                    <Card className="p-8 bg-gray-100 border-2 border-gray-300">
                         <div className="flex items-center mb-4">
                             <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mr-3">
                                 1
@@ -77,11 +77,14 @@ export default function HowToPlaySection() {
                     </p>
                 </Card>
 
-                {/* Night Action Order */}
+                {/* Night Phase */}
                 <div className="mt-12">
-                    <Card className="p-8 bg-white border-2 border-gray-200">
-                        <h3 className="text-3xl font-bold text-center mb-8">
-                            Night Phase Order
+                    <Card className="p-8 bg-gray-100 border-2 border-gray-200">
+                        <h3 className="text-3xl text-center font-bold text-blue-900 mb-8">
+                            Night Phase
+                        </h3>
+                        <h3 className="text-2xl font-bold mb-8">
+                            Action Order:
                         </h3>
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>
@@ -93,8 +96,8 @@ export default function HowToPlaySection() {
                                         "Leader Patron - Target Player",
                                         "Disruptor Patron - Mute Player",
                                         "Recruiter Patron - Convert Attempt",
-                                        "All Patrons - Confirm Sabotage",
                                         "Tethered Patron - Choose Tether Target",
+                                        "All Patrons - Confirm Sabotage",
                                     ].map((text, index) => (
                                         <div
                                             key={index}
@@ -116,14 +119,14 @@ export default function HowToPlaySection() {
                                 </h4>
                                 <div className="space-y-3">
                                     {[
-                                        "Whistle Marshal - Silence Player",
-                                        "Rescue Diver - Eliminate (if unlocked)",
                                         "Lifeguards - Assign Pool Guards",
-                                        "Supervisor - Learn Player Action",
                                         "Security - Learn Alignment",
                                         "Security Bodyguard - Protect Player",
-                                        "Camera Observer - Observe Pool",
                                         "Doctor - Protect Player",
+                                        "Rescue Diver - Eliminate (if unlocked)",
+                                        "Whistle Marshal - Silence Player",
+                                        "Camera Observer - Observe Pool",
+                                        "Supervisor - Learn Player Action",
                                     ].map((text, index) => (
                                         <div
                                             key={index}
@@ -140,15 +143,8 @@ export default function HowToPlaySection() {
                                 </div>
                             </div>
                         </div>
-                    </Card>
-                </div>
-
-                {/* Night Phase Notes */}
-                <div className="mt-12">
-                    <Card className="p-8 bg-white border-2 border-gray-200">
-                        <h3 className="text-3xl font-bold text-center mb-8">
-                            Night Phase Notes
-                        </h3>
+                        <br />
+                        <h3 className="text-2xl font-bold mb-8">Notes</h3>
                         <ul className="text-gray-700 text-lg list-disc list-inside space-y-2 text-left">
                             <li>
                                 Patrons wake together; keep eyes open until all
@@ -163,8 +159,8 @@ export default function HowToPlaySection() {
                                 <ul className="list-disc list-inside pl-5 space-y-1">
                                     <li>Point to choose a player.</li>
                                     <li>
-                                        Patrons display pool numbers with
-                                        fingers; Leader Patron shows final
+                                        Patrons vote by displaying pool numbers
+                                        with fingers; Leader Patron decide final
                                         choice.
                                     </li>
                                     <li>
@@ -185,9 +181,68 @@ export default function HowToPlaySection() {
                                     </li>
                                 </ul>
                             </li>
+                            Leader Patron:
+                            <li>
+                                If the Leader Patron is eliminated, the Regular
+                                Patron to the right of the Leader becomes the
+                                new Leader.
+                            </li>
+                            <li>
+                                If no Regular Patrons are alive but other Patron
+                                roles remain, the Patron role on the right of
+                                the eliminated Leader takes over the Leader role
+                                but loses their special ability immediately
+                                (e.g., a Disruptor who becomes Leader can no
+                                longer mute players).
+                            </li>
                         </ul>
                     </Card>
                 </div>
+
+                {/* Result Phase */}
+                <div className="mt-12">
+                    <Card className="p-8 bg-yellow-50 border-2 border-yellow-300">
+                        <h3 className="text-3xl font-bold text-center mb-8 text-yellow-800">
+                            Result Phase
+                        </h3>
+                        <ul className="text-gray-700 text-lg list-disc list-inside space-y-2 text-left">
+                            <strong>Narrator action:</strong>
+                            <li>Announce eliminated players</li>
+                            <li>Announce muted player</li>
+                            <li>Check winning conditions</li>
+                        </ul>
+                    </Card>
+                </div>
+
+                {/* Day Phase */}
+                <div className="mt-12">
+                    <Card className="p-8 bg-red-50 border-2 border-red-200">
+                        <h3 className="text-3xl font-bold text-center mb-8 text-red-900">
+                            Day Phase
+                        </h3>
+                        <ul className="text-gray-700 text-lg list-disc list-inside space-y-2 text-left">
+                            <strong>Voting & Defense:</strong>
+                            <li>
+                                After results are announced, players discuss
+                                suspicions.
+                            </li>
+                            <li>
+                                Players vote; ties or no votes skip elimination.
+                            </li>
+                            <li>
+                                If a player receives the most votes, they get 60
+                                seconds to defend themselves before a final vote
+                                decides their elimination.
+                            </li>
+                            <li>
+                                If the final vote results in a tie, no player is
+                                eliminated, and the game proceeds to the next
+                                Night Phase.
+                            </li>
+                        </ul>
+                    </Card>
+                </div>
+                {/* Winning Condition */}
                 <div className="mt-12">
                     <Card className="p-8 bg-green-50 border-2 border-green-200">
                         <h3 className="text-3xl font-bold text-center mb-8 text-green-900">

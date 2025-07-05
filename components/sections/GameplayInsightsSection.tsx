@@ -1,6 +1,6 @@
 export default function GameplayInsightsSection() {
     return (
-        <section id="insights" className="py-16 px-4">
+        <section id="insights" className="py-16 px-4 bg-slate-100">
             <div className="container mx-auto text-center">
                 <h2 className="text-4xl font-bold text-blue-900 mb-8">
                     Gameplay Insights
