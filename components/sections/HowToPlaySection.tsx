@@ -81,7 +81,7 @@ export default function HowToPlaySection() {
                 <div className="mt-12">
                     <Card className="p-8 bg-white border-2 border-gray-200">
                         <h3 className="text-3xl font-bold text-center mb-8">
-                            Night Action Order
+                            Night Phase Order
                         </h3>
                         <div className="grid md:grid-cols-2 gap-8">
                             <div>

@@ -3,7 +3,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Sun, Waves } from "lucide-react";
 
-export default function HeroSection() {
+export default function HomeSection() {
     return (
         <section
             id="home"

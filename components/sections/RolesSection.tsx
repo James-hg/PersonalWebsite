@@ -134,8 +134,8 @@ export default function RolesSection() {
                             </CardHeader>
                             <CardContent className="p-6 pt-0">
                                 <div className="text-xs text-gray-600 bg-gray-50 p-3 rounded">
-                                    <strong>Special Rule:</strong> The Narrator
-                                    must remain neutral, keep all night actions
+                                    <strong>Rule:</strong> The Narrator must
+                                    remain neutral, keep all night actions
                                     secret, and announce results clearly each
                                     round.
                                 </div>
