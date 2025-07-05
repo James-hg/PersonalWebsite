@@ -12,6 +12,15 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-}
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/iat210boardgame',
+        permanent: true, // 301 redirect
+      },
+    ];
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
