@@ -1,5 +1,5 @@
 import Navbar from "@/components/sections/NavBar";
-import HomeSection from "@/components/sections/Homesection";
+import HomeSection from "@/components/sections/HomeSection";
 import AboutSection from "@/components/sections/AboutSection";
 import BackstorySection from "@/components/sections/BackStorySection";
 import HowToPlaySection from "@/components/sections/HowToPlaySection";
