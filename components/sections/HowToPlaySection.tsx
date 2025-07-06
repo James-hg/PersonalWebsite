@@ -119,7 +119,6 @@ export default function HowToPlaySection() {
                                 </h4>
                                 <div className="space-y-3">
                                     {[
-                                        "Lifeguards - Assign Pool Guards",
                                         "Security - Learn Alignment",
                                         "Security Bodyguard - Protect Player",
                                         "Doctor - Protect Player",
