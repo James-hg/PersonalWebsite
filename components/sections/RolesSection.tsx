@@ -324,7 +324,10 @@ export default function RolesSection() {
                         <p className="text-gray-600 mb-4">
                             Roles scale with player count for balanced gameplay!
                         </p>
-                        <Badge variant="outline" className="text-lg px-4 py-2">
+                        <Badge
+                            variant="outline"
+                            className="text-lg px-4 py-2 bg-slate-200"
+                        >
                             <Users className="w-4 h-4 mr-2" />
                             Recommended: 10+ Players
                         </Badge>

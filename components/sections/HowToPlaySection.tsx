@@ -13,7 +13,7 @@ export default function HowToPlaySection() {
 
                 {/* Phase Cards */}
                 <div className="grid md:grid-cols-3 gap-8 mb-12">
-                    <Card className="p-8 bg-gray-100 border-2 border-gray-300">
+                    <Card className="p-8 bg-gray-50 border-2 border-gray-300">
                         <div className="flex items-center mb-4">
                             <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mr-3">
                                 1
@@ -79,7 +79,7 @@ export default function HowToPlaySection() {
 
                 {/* Night Phase */}
                 <div className="mt-12">
-                    <Card className="p-8 bg-gray-100 border-2 border-gray-200">
+                    <Card className="p-8 bg-gray-50 border-2 border-gray-200">
                         <h3 className="text-3xl text-center font-bold text-blue-900 mb-8">
                             Night Phase
                         </h3>
