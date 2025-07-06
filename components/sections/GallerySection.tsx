@@ -1,5 +1,5 @@
 "use client";
-import FlipCard from "../ui/flipcard";
+import FlipCard from "../ui/FlipCard";
 
 export default function GallerySection() {
     return (
