@@ -3,7 +3,8 @@ import FlipCard from "../ui/FlipCard";
 
 export default function GallerySection() {
     return (
-        <section className="overflow-x-auto whitespace-nowrap py-16 bg-gray-50">
+        <section className="overflow-x-auto whitespace-nowrap text-center py-16 bg-gray-50">
+            <h2 className="text-4xl font-bold text-blue-900 mb-8">Gallery</h2>
             <div className="flex space-x-6 px-8">
                 <div className="flex-shrink-0 bg-white rounded-2xl shadow-lg max-w-xs">
                     <img

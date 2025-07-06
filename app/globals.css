@@ -47,16 +47,16 @@
         --input: 217.2 32.6% 17.5%;
         --ring: 224.3 76.3% 94.1%;
     }
-    .perspective {
-        perspective: 1000px;
-    }
-
-    .backface-hidden {
-        backface-visibility: hidden;
+    .preserve-3d {
+        transform-style: preserve-3d;
     }
 
     .rotate-y-180 {
         transform: rotateY(180deg);
+    }
+
+    .backface-hidden {
+        backface-visibility: hidden;
     }
 }
 

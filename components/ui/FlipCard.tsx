@@ -16,10 +16,11 @@ export default function FlipCard({ frontImg, backImg, alt }: FlipCardProps) {
             onClick={() => setIsFlipped(!isFlipped)}
         >
             <div
-                className={`relative w-full h-full duration-700 transform-style preserve-3d ${
+                className={`relative w-full h-full transition-transform duration-700 preserve-3d ${
                     isFlipped ? "rotate-y-180" : ""
                 }`}
             >
+                {/* Front Side */}
                 <div className="absolute w-full h-full backface-hidden">
                     <img
                         src={frontImg}
@@ -27,7 +28,9 @@ export default function FlipCard({ frontImg, backImg, alt }: FlipCardProps) {
                         className="w-full h-full object-cover rounded-xl"
                     />
                 </div>
-                <div className="absolute w-full h-full rotate-y-180 backface-hidden">
+
+                {/* Back Side */}
+                <div className="absolute w-full h-full backface-hidden rotate-y-180">
                     <img
                         src={backImg}
                         alt={`${alt} Back`}
