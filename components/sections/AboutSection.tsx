@@ -56,7 +56,7 @@ export default function AboutSection() {
                     Three Game Pillars
                 </h3>
                 <div className="grid md:grid-cols-3 gap-8 mb-16">
-                    <Card className="text-center p-8 bg-white border-2 border-gray-200">
+                    <Card className="text-center p-8 bg-white border-2 border-gray-200 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
                         <div className="flex justify-center mb-4">
                             <Lightbulb className="w-16 h-16 text-yellow-500" />
                         </div>
@@ -69,7 +69,7 @@ export default function AboutSection() {
                         </p>
                     </Card>
 
-                    <Card className="text-center p-8 bg-white border-2 border-gray-200">
+                    <Card className="text-center p-8 bg-white border-2 border-gray-200 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
                         <div className="flex justify-center mb-4">
                             <Target className="w-16 h-16 text-red-600" />
                         </div>
@@ -83,7 +83,7 @@ export default function AboutSection() {
                         </p>
                     </Card>
 
-                    <Card className="text-center p-8 bg-white border-2 border-gray-200">
+                    <Card className="text-center p-8 bg-white border-2 border-gray-200 transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
                         <div className="flex justify-center mb-4">
                             {/* <ShieldCheck className="w-16 h-16 text-green-600" /> */}
                             <UserRound className="w-16 h-16 text-green-600" />
