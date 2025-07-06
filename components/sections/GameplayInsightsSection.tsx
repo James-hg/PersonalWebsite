@@ -293,7 +293,9 @@ export default function GameplayInsightsSection() {
                                 Assume 10 days to win → max ~90 mins (1h30).{" "}
                                 <br />
                                 However, most playtesting ends between 60–90
-                                mins, depending on player's discussions.
+                                mins, depending on player's discussions,
+                                eliminations, and information retrieves from
+                                Lifeguards investigators.
                             </p>
                         </strong>
                     </div>
