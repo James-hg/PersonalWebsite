@@ -2,6 +2,7 @@ import Navbar from "@/components/sections/NavBar";
 import HomeSection from "@/components/sections/HomeSection";
 import AboutSection from "@/components/sections/AboutSection";
 import BackstorySection from "@/components/sections/BackStorySection";
+import GallerySection from "@/components/sections/GallerySection";
 import HowToPlaySection from "@/components/sections/HowToPlaySection";
 import RolesSection from "@/components/sections/RolesSection";
 // import Footer from "@/components/sections/Footer";
@@ -18,6 +19,7 @@ export default function GuardDutyWebsite() {
             <TrailerSection />
             <AboutSection />
             <BackstorySection />
+            <GallerySection />
             <RolesSection />
             <HowToPlaySection />
             <DocumentationSection />

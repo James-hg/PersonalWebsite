@@ -144,7 +144,7 @@ export default function HowToPlaySection() {
                             </div>
                         </div>
                         <br />
-                        <h3 className="text-2xl font-bold mb-8">Notes</h3>
+                        <h3 className="text-2xl font-bold mb-8">Notes:</h3>
                         <ul className="text-gray-700 text-lg list-disc list-inside space-y-2 text-left">
                             <li>
                                 Patrons wake together; keep eyes open until all

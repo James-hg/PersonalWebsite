@@ -9,11 +9,12 @@ export default function BackstorySection() {
                 </h2>
                 <div className="max-w-4xl mx-auto text-left text-gray-700 text-lg space-y-6">
                     <p>
-                        It’s the height of summer at Serenity Pools, the city’s
-                        most popular public swimming complex. Families flock
-                        here to escape the heat, kids squeal with joy, and the
-                        sun shines bright over sparkling water. But behind the
-                        cheerful splashes, a sinister undercurrent flows.
+                        It’s the height of summer at Hillcrest Aquatic Centre,
+                        the city’s most popular public swimming complex.
+                        Families flock here to escape the heat, kids squeal with
+                        joy, and the sun shines bright over sparkling water. But
+                        behind the cheerful splashes, a sinister undercurrent
+                        flows.
                     </p>
                     <p>
                         The pool has become the center of a bitter dispute: a

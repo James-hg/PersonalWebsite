@@ -7,6 +7,7 @@ import {
     Lightbulb,
     Target,
     ShieldCheck,
+    UserRound,
 } from "lucide-react";
 
 export default function AboutSection() {
@@ -84,7 +85,10 @@ export default function AboutSection() {
 
                     <Card className="text-center p-8 bg-white border-2 border-gray-200">
                         <div className="flex justify-center mb-4">
-                            <ShieldCheck className="w-16 h-16 text-green-600" />
+                            {/* <ShieldCheck className="w-16 h-16 text-green-600" /> */}
+                            <UserRound className="w-16 h-16 text-green-600" />
+                            <UserRound className="w-16 h-16 text-green-600" />
+                            <UserRound className="w-16 h-16 text-green-600" />
                         </div>
                         <h3 className="text-2xl font-bold text-blue-900 mb-4">
                             Why

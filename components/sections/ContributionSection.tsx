@@ -27,7 +27,7 @@ export default function ContributionSection() {
                     </li>
                     <p>Example:</p>
                     <li>
-                        <strong>James Hoang</strong>: 69% - e.g. Website
+                        <strong>James Hoang</strong>: 20% - e.g. Website
                         development, Rule Book, Play Testing + Log, Game
                         Dynamics & Gameplay.
                     </li>
