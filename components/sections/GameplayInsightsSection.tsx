@@ -103,65 +103,78 @@ export default function GameplayInsightsSection() {
                         </p> */}
                         <ul className="text-gray-700 text-lg list-disc list-inside space-y-2 text-left">
                             <li>
-                                <b>Guard Placement vs. Spread:</b> Lifeguards
-                                must choose between focusing guards on pools
-                                they believe Patrons will target — risking
-                                predictability — or spreading guards widely and
-                                risking sabotage at unprotected pools.
+                                <b>Guard Placement vs. Spread:</b>
+                                <br />
+                                Lifeguards must choose between focusing guards
+                                on pools they believe Patrons will target —
+                                risking predictability — or spreading guards
+                                widely and risking sabotage at unprotected
+                                pools.
                             </li>
                             <li>
-                                <b>Reveal or Conceal:</b> Investigative roles
-                                like Security, Camera Observer, or Supervisor
-                                face the dilemma of revealing information early
-                                to guide votes — which exposes themselves as
-                                high-value targets — or keeping findings secret
-                                to stay alive longer.
+                                <b>Reveal or Conceal:</b>
+                                <br />
+                                Investigative roles like Security, Camera
+                                Observer, or Supervisor face the dilemma of
+                                revealing information early to guide votes —
+                                which exposes themselves as high-value targets —
+                                or keeping findings secret to stay alive longer.
                             </li>
                             <li>
-                                <b>Aggressive vs. Cautious Play:</b> Patrons
-                                must decide whether to sabotage aggressively,
-                                increasing chances of success but also raising
-                                suspicion, or play passively to avoid detection
-                                — risking that the game drags on unfavorably.
+                                <b>Aggressive vs. Cautious Play:</b>
+                                <br />
+                                Patrons must decide whether to sabotage
+                                aggressively, increasing chances of success but
+                                also raising suspicion, or play passively to
+                                avoid detection — risking that the game drags on
+                                unfavorably.
                             </li>
                             <li>
-                                <b>Voting Choices:</b> During the Day Phase,
-                                players debate whether to push for an
-                                elimination based on limited information or hold
-                                back and risk letting the opposing team gain the
-                                upper hand. Ties or hasty votes can protect key
-                                Patrons or eliminate valuable Lifeguards.
+                                <b>Voting Choices:</b>
+                                <br />
+                                During the Day Phase, players debate whether to
+                                push for an elimination based on limited
+                                information or hold back and risk letting the
+                                opposing team gain the upper hand. Ties or hasty
+                                votes can protect key Patrons or eliminate
+                                valuable Lifeguards.
                             </li>
                             <li>
-                                <b>Mute Timing:</b> Disruptor Patron must decide
-                                when muting a player will do the most damage to
-                                Lifeguard discussions — too early can waste the
-                                ability, too late may let Lifeguards build
-                                unstoppable momentum.
+                                <b>Mute Timing:</b>
+                                <br />
+                                Disruptor Patron must decide when muting a
+                                player will do the most damage to Lifeguard
+                                discussions — too early can waste the ability,
+                                too late may let Lifeguards build unstoppable
+                                momentum.
                             </li>
                             <li>
-                                <b>Defense vs Attack Roles:</b> Lifeguards need
-                                to balance defending their investigators
-                                (Security, Camera Observer) with using offensive
-                                roles like Rescue Diver effectively — focusing
-                                too much on defense can stall progress, but
-                                overly aggressive moves can expose critical
-                                roles.
+                                <b>Defense vs Attack Roles:</b>
+                                <br />
+                                Lifeguards need to balance defending their
+                                investigators (Security, Camera Observer) with
+                                using offensive roles like Rescue Diver
+                                effectively — focusing too much on defense can
+                                stall progress, but overly aggressive moves can
+                                expose critical roles.
                             </li>
                             <li>
-                                <b>Sleeper Lifeguard Protection:</b> Lifeguards
-                                have to decide if protecting the Sleeper
-                                Lifeguard is worth exposing patterns that
-                                Patrons can exploit, or leave them vulnerable to
-                                conversion by the Recruiter Patron — risking an
-                                instant swing in Patron strength.
+                                <b>Sleeper Lifeguard Protection:</b>
+                                <br />
+                                Lifeguards have to decide if protecting the
+                                Sleeper Lifeguard is worth exposing patterns
+                                that Patrons can exploit, or leave them
+                                vulnerable to conversion by the Recruiter Patron
+                                — risking an instant swing in Patron strength.
                             </li>
                             <li>
-                                <b>Tethered Patron Threat:</b> Once suspected or
-                                revealed, players must consider the possibility
-                                that eliminating Tethered Patron could take down
-                                a key Lifeguard, creating a tense dilemma where
-                                no vote is truly safe.
+                                <b>Tethered Patron Threat:</b>
+                                <br />
+                                Once suspected or revealed, players must
+                                consider the possibility that eliminating
+                                Tethered Patron could take down a key Lifeguard,
+                                creating a tense dilemma where no vote is truly
+                                safe.
                             </li>
                         </ul>
                     </div>
