@@ -8,9 +8,11 @@ export default function NavBar() {
             <div className="container mx-auto px-4 py-4 flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                     <Waves className="w-8 h-8 text-blue-600" />
-                    <span className="text-2xl font-bold text-blue-900">
-                        Guard Duty
-                    </span>
+                    <Link href="#">
+                        <span className="text-2xl font-bold text-blue-700 hover:text-blue-900">
+                            Guard Duty
+                        </span>
+                    </Link>
                 </div>
                 <div className="hidden md:flex space-x-6">
                     <Link
