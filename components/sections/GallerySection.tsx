@@ -1,4 +1,5 @@
 "use client";
+import FlipCard from "../ui/FlipCard";
 
 export default function GallerySection() {
     return (
@@ -38,7 +39,7 @@ export default function GallerySection() {
                         <h3 className="text-xl font-bold mb-2">Game Box</h3>
                     </div>
                 </div>
-                {/*
+
                 <div className="flex-shrink-0 min-w-fit">
                     <FlipCard
                         frontImg="/images/lifeguard.png"
@@ -165,7 +166,7 @@ export default function GallerySection() {
                         backImg="/images/card-back.png"
                         alt="Whistle Marshal Card"
                     />
-                </div> */}
+                </div>
             </div>
         </section>
     );
