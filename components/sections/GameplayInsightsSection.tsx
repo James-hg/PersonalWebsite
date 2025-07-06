@@ -179,13 +179,123 @@ export default function GameplayInsightsSection() {
                         </ul>
                     </div>
                     <div>
-                        <h3 className="text-2xl font-bold text-blue-700 mb-2">
-                            Typical Play Duration
+                        <h3 className="text-2xl font-bold text-blue-700 mb-4">
+                            Typical Play Duration & Game Flow
                         </h3>
-                        <p className="text-gray-700">
-                            A full game session lasts approximately 45–60
-                            minutes, depending on player discussions.
+
+                        <h4 className="text-xl font-bold text-gray-800 mb-2">
+                            🌙 Night Phase (Round 1) (~4 min)
+                        </h4>
+                        <p className="text-gray-700 mb-2 font-semibold">
+                            Patron Roles Called in Order:
                         </p>
+                        <ul className="list-decimal list-inside text-gray-700 mb-4 space-y-1">
+                            <li>
+                                Leader Patron – Choose sabotage pool & target
+                                player (15s)
+                            </li>
+                            <li>
+                                Disruptor Patron – Select player to mute (15s)
+                            </li>
+                            <li>
+                                Recruiter Patron – Attempt conversion (if not
+                                yet used) (15s)
+                            </li>
+                            <li>
+                                Tethered Patron – Choose player to tether (15s)
+                            </li>
+                            <li>All Patrons – Confirm sabotage (30s)</li>
+                        </ul>
+
+                        <p className="text-gray-700 mb-2 font-semibold">
+                            Lifeguard Roles Called in Order:
+                        </p>
+                        <ul className="list-decimal list-inside text-gray-700 mb-4 space-y-1">
+                            <li>
+                                Lifeguards – Assign guards to pools (each 15s,
+                                total ~45s)
+                            </li>
+                            <li>
+                                Security – Investigate player alignment (15s)
+                            </li>
+                            <li>Security Bodyguard – Protect a player (15s)</li>
+                            <li>
+                                Doctor – Protect a player from elimination (15s)
+                            </li>
+                            <li>
+                                Rescue Diver – Optionally eliminate (if
+                                unlocked) (15s)
+                            </li>
+                            <li>Whistle Marshal – Silence a player (15s)</li>
+                            <li>Camera Observer – Observe one pool (15s)</li>
+                            <li>
+                                Supervisor – Learn if a player performed an
+                                action (15s)
+                            </li>
+                        </ul>
+
+                        <h4 className="text-xl font-bold text-gray-800 mb-2">
+                            📣 Results Phase (~30s)
+                        </h4>
+                        <p className="text-gray-700 mb-1">
+                            Narrator announces:
+                        </p>
+                        <ul className="list-disc list-inside text-gray-700 mb-4 space-y-1">
+                            <li>Eliminated player(s) (if any)</li>
+                            <li>Mutes or silences triggered</li>
+                            <li>
+                                Pools sabotaged (if observed by Camera Observer)
+                            </li>
+                        </ul>
+                        <p className="text-gray-700 mb-1">
+                            Narrator checks for victory conditions:
+                        </p>
+                        <ul className="list-disc list-inside text-gray-700 mb-4 space-y-1">
+                            <li>
+                                Lifeguards win if all Patrons eliminated or
+                                rounds goal met
+                            </li>
+                            <li>
+                                Patrons win if Patrons ≥ Lifeguards or sabotage
+                                goal met
+                            </li>
+                        </ul>
+
+                        <h4 className="text-xl font-bold text-gray-800 mb-2">
+                            💬 Discussion Phase (~4 min)
+                        </h4>
+                        <ul className="list-disc list-inside text-gray-700 mb-4 space-y-1">
+                            <li>
+                                Open discussion: Players debate, accuse, and
+                                defend (2 min)
+                            </li>
+                            <li>
+                                Initial vote: Players vote to nominate one
+                                player (30s)
+                            </li>
+                            <li>
+                                If tie or no nomination → skip to next Night
+                                Phase
+                            </li>
+                            <li>
+                                Defense: Nominated player has 60 seconds to
+                                plead their case (1 min)
+                            </li>
+                            <li>
+                                Final vote: Players vote to either kick
+                                (eliminate) or spare the nominated player (30s)
+                            </li>
+                        </ul>
+
+                        <strong>
+                            <p className="text-gray-700 text-xl">
+                                Each day: max 9 mins per day. <br />
+                                Assume 10 days to win → max ~90 mins (1h30).{" "}
+                                <br />
+                                However, most playtesting ends between 60–90
+                                mins, depending on player's discussions.
+                            </p>
+                        </strong>
                     </div>
                 </div>
             </div>
