@@ -38,6 +38,12 @@ export default function NavBar() {
                         Backstory
                     </Link> */}
                     <Link
+                        href="#gallery"
+                        className="text-blue-700 hover:text-blue-900 font-medium"
+                    >
+                        Gallery
+                    </Link>
+                    <Link
                         href="#roles"
                         className="text-blue-700 hover:text-blue-900 font-medium"
                     >

@@ -12,7 +12,7 @@ export default function FlipCard({ frontImg, backImg, alt }: FlipCardProps) {
 
     return (
         <div
-            className="w-64 h-96 perspective cursor-pointer"
+            className="w-64 h-96 perspective cursor-pointer transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
             onClick={() => setIsFlipped(!isFlipped)}
         >
             <div

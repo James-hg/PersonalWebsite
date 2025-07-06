@@ -1,6 +1,6 @@
 export default function TrailerSection() {
     return (
-        <section id="trailer" className="py-16 px-4 bg-gray-100">
+        <section id="trailer" className="py-16 px-4 bg-gray-50">
             <div className="container mx-auto text-center">
                 <h2 className="text-4xl font-bold text-blue-900 mb-6">
                     Watch the Trailer

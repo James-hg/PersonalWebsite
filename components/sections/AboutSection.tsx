@@ -12,7 +12,7 @@ import {
 
 export default function AboutSection() {
     return (
-        <section id="about" className="py-16 px-4 bg-gray-50">
+        <section id="about" className="py-16 px-4 bg-gray-100">
             <div className="container mx-auto">
                 <div className="text-center mb-12">
                     <h2 className="text-4xl font-bold text-blue-900 mb-6">
