@@ -1,6 +1,9 @@
 "use client";
+import { useState } from "react";
 
 export default function BackstorySection() {
+    const [isExpanded, setIsExpanded] = useState(false);
+
     return (
         <section id="backstory" className="py-16 px-4 bg-slate-50">
             <div className="container mx-auto text-center">
@@ -20,12 +23,12 @@ export default function BackstorySection() {
                         The pool has become the center of a bitter dispute: a
                         secret group of Patrons, frustrated by rising entry fees
                         and poor maintenance, have banded together in a shadowy
-                        pact. By night, these saboteurs plan to force the pool’s
+                        pact. By night, these saboteurs plan to force the pool's
                         closure through calculated acts of mischief and mayhem:
                         dye bombs, drain clogs, and damage to vital equipment.
                     </p>
                     <p>
-                        The lifeguards, the city’s frontline defenders of fun
+                        The lifeguards, the city's frontline defenders of fun
                         and safety, are sworn to protect the pool at all costs.
                         They form a clandestine alliance of specialized roles,
                         each using their unique skills to detect, protect, and
@@ -36,9 +39,30 @@ export default function BackstorySection() {
                     <p>
                         But no one knows who to trust. Hidden identities and
                         secret agendas mean friends could be foes, and a single
-                        slip-up could doom the pool — or save it for another
+                        slip up could doom the pool, or save it for another
                         summer day.
                     </p>
+                </div>
+            </div>
+            <div className="py-8 px-4 bg-slate-50 flex flex-col items-center">
+                <button
+                    onClick={() => setIsExpanded(!isExpanded)}
+                    className="bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300"
+                >
+                    {isExpanded ? "Hide Banner" : "Show Banner"}
+                </button>
+
+                <div
+                    className={`overflow-hidden transition-max-height duration-700 ease-in-out shadow mt-6 rounded-2xl w-full max-w-3xl ${
+                        isExpanded ? "max-h-[7000px]" : "max-h-0"
+                    }`}
+                >
+                    <img
+                        src="/images/banner.png"
+                        alt="Guard Duty Banner"
+                        className="w-full rounded-2xl object-contain"
+                        sizes="1/2"
+                    />
                 </div>
             </div>
         </section>

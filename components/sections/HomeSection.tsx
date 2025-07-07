@@ -9,7 +9,7 @@ export default function HomeSection() {
             id="home"
             className="relative text-center text-white overflow-hidden min-h-screen flex items-start w-full pt-8"
             style={{
-                backgroundImage: "url('/images/banner.png')",
+                backgroundImage: "url('/images/background.png')",
                 backgroundSize: "cover",
                 backgroundPosition: "center center",
                 backgroundRepeat: "no-repeat",

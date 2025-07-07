@@ -74,7 +74,7 @@ export default function GameplayInsightsSection() {
                             </li>
                             <li>
                                 Rescue Diver’s one-time elimination power can be
-                                a game-changer if used soon after sabotage, but
+                                a game changer if used soon after sabotage, but
                                 waiting too long risks missing the opportunity
                                 entirely.
                             </li>
@@ -85,7 +85,7 @@ export default function GameplayInsightsSection() {
                                 the Patrons’ favor.
                             </li>
                             <li>
-                                Tethered Patron introduces high-risk stakes to
+                                Tethered Patron introduces high risk stakes to
                                 every vote, forcing all players to consider that
                                 eliminating the wrong target could cause
                                 unexpected double eliminations.
@@ -106,8 +106,8 @@ export default function GameplayInsightsSection() {
                                 <b>Guard Placement vs. Spread:</b>
                                 <br />
                                 Lifeguards must choose between focusing guards
-                                on pools they believe Patrons will target —
-                                risking predictability — or spreading guards
+                                on pools they believe Patrons will target,
+                                risking predictability, or spreading guards
                                 widely and risking sabotage at unprotected
                                 pools.
                             </li>
@@ -116,8 +116,8 @@ export default function GameplayInsightsSection() {
                                 <br />
                                 Investigative roles like Security, Camera
                                 Observer, or Supervisor face the dilemma of
-                                revealing information early to guide votes —
-                                which exposes themselves as high-value targets —
+                                revealing information early to guide votes,
+                                which exposes themselves as high-value targets,
                                 or keeping findings secret to stay alive longer.
                             </li>
                             <li>
@@ -126,7 +126,7 @@ export default function GameplayInsightsSection() {
                                 Patrons must decide whether to sabotage
                                 aggressively, increasing chances of success but
                                 also raising suspicion, or play passively to
-                                avoid detection — risking that the game drags on
+                                avoid detection, risking that the game drags on
                                 unfavorably.
                             </li>
                             <li>
@@ -144,7 +144,7 @@ export default function GameplayInsightsSection() {
                                 <br />
                                 Disruptor Patron must decide when muting a
                                 player will do the most damage to Lifeguard
-                                discussions — too early can waste the ability,
+                                discussions, too early can waste the ability,
                                 too late may let Lifeguards build unstoppable
                                 momentum.
                             </li>
@@ -154,7 +154,7 @@ export default function GameplayInsightsSection() {
                                 Lifeguards need to balance defending their
                                 investigators (Security, Camera Observer) with
                                 using offensive roles like Rescue Diver
-                                effectively — focusing too much on defense can
+                                effectively, focusing too much on defense can
                                 stall progress, but overly aggressive moves can
                                 expose critical roles.
                             </li>
@@ -164,8 +164,9 @@ export default function GameplayInsightsSection() {
                                 Lifeguards have to decide if protecting the
                                 Sleeper Lifeguard is worth exposing patterns
                                 that Patrons can exploit, or leave them
-                                vulnerable to conversion by the Recruiter Patron
-                                — risking an instant swing in Patron strength.
+                                vulnerable to conversion by the Recruiter
+                                Patron, risking an instant swing in Patron
+                                strength.
                             </li>
                             <li>
                                 <b>Tethered Patron Threat:</b>
@@ -184,7 +185,7 @@ export default function GameplayInsightsSection() {
                         </h3>
 
                         <h4 className="text-xl font-bold text-gray-800 mb-2">
-                            🌙 Night Phase (Round 1) (~4 min)
+                            🌙 Night Phase (~4 min)
                         </h4>
                         <p className="text-gray-700 mb-2 font-semibold">
                             Patron Roles Called in Order:

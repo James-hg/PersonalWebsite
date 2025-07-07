@@ -11,35 +11,38 @@ export default function ContributionSection() {
                 </p>
                 <ul className="space-y-4 text-left max-w-xl mx-auto">
                     <li>
-                        <strong>Kylie Wawryk</strong>: - .
+                        <strong>Kylie Wawryk</strong>: 25% - Banner, Trailer,
+                        Backstory Gallery, Logbook, Criteria Checklist,
+                        Finalizing, Formatting.
                     </li>
                     <li>
-                        <strong>Dami Kim</strong>: - .
+                        <strong>Dami Kim</strong>: 25% - Website design,
+                        Summary, Game Pillars, Backstory, Rulebook, Playtesting,
+                        Game Dynamics.
                     </li>
                     <li>
-                        <strong>James Hoang</strong>: - .
+                        <strong>James Hoang</strong>: 30% - Website development,
+                        Core Statement, Backstory, Summary, Game pillars,
+                        Rulebook, Playtesting, Flowchart, Game Dynamics.
                     </li>
                     <li>
-                        <strong>Joshua Weekes</strong>: - .
+                        <strong>Joshua Weekes</strong>: 10% - Analysis, Game
+                        Concept, Idea/Theme.
                     </li>
                     <li>
-                        <strong>Jamal Asmi</strong>: - .
+                        <strong>Jamal Asmi</strong>: 10% - Analysis, Game
+                        Concept, Idea/Theme.
                     </li>
-                    <p>Example:</p>
-                    <li>
-                        <strong>James Hoang</strong>: 20% - e.g. Website
-                        development, Rule Book, Play Testing + Log, Game
-                        Dynamics & Gameplay.
-                    </li>
-                    {/* <li>
-                        <strong>John Smith</strong>: 30% – Website development,
-                        visuals, and component illustrations.
-                    </li>
-                    <li>
-                        <strong>Alice Lee</strong>: 30% – Playtesting,
-                        documentation logs, and game balance analysis.
-                    </li> */}
                 </ul>
+                <div className="text-center mt-12">
+                    <a
+                        href="/ContributionLog.pdf"
+                        target="_blank"
+                        className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg shadow-lg transition"
+                    >
+                        Download the Contribution Log
+                    </a>
+                </div>
             </div>
         </section>
     );
