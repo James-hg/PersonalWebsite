@@ -67,6 +67,7 @@ export default function BackstorySection() {
                         className="w-full rounded-2xl object-contain"
                         sizes="1/2"
                     />
+                    <p>Drawn by Kylie</p>
                 </div>
             </div>
         </section>
