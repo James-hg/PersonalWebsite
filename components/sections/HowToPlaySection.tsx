@@ -115,10 +115,11 @@ export default function HowToPlaySection() {
                             </div>
                             <div>
                                 <h4 className="text-xl font-bold text-blue-600 mb-6">
-                                    Lifeguard Actions (6-12)
+                                    Lifeguard Actions (6-13)
                                 </h4>
                                 <div className="space-y-3">
                                     {[
+                                        "Regular Lifeguard - Choose a pool to guard",
                                         "Security - Learn Alignment",
                                         "Security Bodyguard - Protect Player",
                                         "Doctor - Protect Player",
