@@ -9,7 +9,7 @@ export default function DocumentationSection() {
                     {[
                         {
                             name: "Group Meeting Log",
-                            file: "SampleMeetingLog.pdf",
+                            file: "MeetingLog.pdf",
                         },
                         {
                             name: "Playtesting Log",
