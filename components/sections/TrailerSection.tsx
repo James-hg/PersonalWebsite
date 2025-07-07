@@ -8,7 +8,7 @@ export default function TrailerSection() {
                 <div className="relative w-full h-0 pb-[56.25%] mb-6">
                     <iframe
                         className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
-                        src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                        src="https://youtu.be/jG2Vn-OmGC8?si=bvcdiqMNvUkKGPp5"
                         title="Guard Duty Trailer"
                         frameBorder="0"
                         allow="autoplay; encrypted-media"
