@@ -12,35 +12,39 @@ export default function BackstorySection() {
                 </h2>
                 <div className="max-w-4xl mx-auto text-left text-gray-700 text-lg space-y-6">
                     <p>
-                        It’s the height of summer at Hillcrest Aquatic Centre,
-                        the city’s most popular public swimming complex.
-                        Families flock here to escape the heat, kids squeal with
-                        joy, and the sun shines bright over sparkling water. But
-                        behind the cheerful splashes, a sinister undercurrent
-                        flows.
+                        At Splash Funzone, the most popular outdoor swimming
+                        pool in the city, summer is at its peak. The sun beats
+                        down over the slimy, sunscreen contaminated water, as
+                        families gather for their day trip barbecues to escape
+                        the heat while their children splash and squeal in the
+                        pools. But behind the cheerful splashes, a sinister
+                        undercurrent flows
                     </p>
                     <p>
-                        The pool has become the center of a bitter dispute: a
-                        secret group of Patrons, frustrated by rising entry fees
-                        and poor maintenance, have banded together in a shadowy
-                        pact. By night, these saboteurs plan to force the pool's
-                        closure through calculated acts of mischief and mayhem:
-                        dye bombs, drain clogs, and damage to vital equipment.
+                        The pool is turning into the center of a bitter dispute:
+                        a secret group of Patrons, frustrated by rising
+                        admission costs and poor maintenance, have banded
+                        together and are scheming against the lifeguards. By
+                        night, these saboteurs plan to force the pool’s closure
+                        through calculated acts of mischief and chaos: dye
+                        bombs, drain clogs, and damage to the pool.
                     </p>
                     <p>
-                        The lifeguards, the city's frontline defenders of fun
-                        and safety, are sworn to protect the pool at all costs.
-                        They form a clandestine alliance of specialized roles,
-                        each using their unique skills to detect, protect, and
+                        The lifeguards, the city’s first line of defense for of
+                        fun and safety, are sworn to protect the pool at all
+                        costs. They form a union of specialized roles, each
+                        using their unique skills to detect, protect, and
                         neutralize threats. Under the cover of darkness, both
-                        sides play a dangerous game of cat and mouse, each vying
-                        to achieve their goals before dawn reveals the victors.
+                        sides play a dangerous game of cat and mouse, each
+                        plotting to achieve their goals before dawn reveals the
+                        victors.
                     </p>
                     <p>
-                        But no one knows who to trust. Hidden identities and
-                        secret agendas mean friends could be foes, and a single
-                        slip up could doom the pool, or save it for another
-                        summer day.
+                        However, nobody knows who to trust. Hidden identities
+                        and secret agendas mean friends can turn to enemies in a
+                        blink of an eye, and a single mistake could spell
+                        disaster for the pool, or save it for another summer
+                        day.
                     </p>
                 </div>
             </div>
