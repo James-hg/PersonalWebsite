@@ -10,7 +10,19 @@ export default function IAT210ResearchEssay() {
                 </h1>
                 <p className="mt-6 text-sm text-gray-500">By James Hoang</p>
             </div>
-
+            <div className="my-10">
+                <Image
+                    src="/images/pubg.jpg"
+                    alt="PlayerUnknown's Battlegrounds cover image"
+                    width={1000}
+                    height={600}
+                    className="rounded-lg shadow-md mx-auto"
+                />
+                <p className="text-center text-sm text-gray-500 mt-2">
+                    Figure 1: Iconic promotional artwork featuring the main PUBG
+                    character in a war-torn zone.
+                </p>
+            </div>
             <section className="space-y-6 text-lg leading-relaxed">
                 <h2>
                     <strong>Introduction</strong>
@@ -58,6 +70,19 @@ export default function IAT210ResearchEssay() {
                     mechanisms, as well as the competitive game design
                     paradigm's progression.
                 </p>
+                <div className="my-10">
+                    <Image
+                        src="/images/pubg1.jpeg"
+                        alt="PUBG aiming at farm village"
+                        width={1200}
+                        height={700}
+                        className="rounded-lg shadow-md mx-auto"
+                    />
+                    <p className="text-center text-sm text-gray-500 mt-2">
+                        Figure 2: Simulated battleground in PUBG — a player
+                        scopes in on rural terrain.
+                    </p>
+                </div>
 
                 <h2 className="text-2xl font-semibold">
                     I. Simulation and Virtual Crisis in PUBG
@@ -124,6 +149,19 @@ export default function IAT210ResearchEssay() {
                 </p>
                 <p></p>
                 <p></p>
+                <div className="my-10">
+                    <Image
+                        src="/images/pubg-erangle-map.webp"
+                        alt="Erangel map in PUBG"
+                        width={900}
+                        height={900}
+                        className="rounded-lg shadow-md mx-auto"
+                    />
+                    <p className="text-center text-sm text-gray-500 mt-2">
+                        Figure 3: The Erangel map layout — PUBG’s first
+                        large-scale battle arena.
+                    </p>
+                </div>
 
                 <h2 className="text-2xl font-semibold">
                     II. Playful-Consumption and Addictive Hedonics
@@ -157,15 +195,15 @@ export default function IAT210ResearchEssay() {
                     These found patterns closely mirror the idea of Internet
                     Gaming Disorder as defined by Sunil, Sharma, and Anand
                     (2021). Their exhaustive meta-analysis draws ties between
-                    playing PUBG and increased rates of anxiety, hyperactivity
-                    disorder (ADHD), and even suicidal tendencies. According to
-                    the authors, playing PUBG is an unhealthy way of dealing
-                    with stress for pre-existing mental conditions, setting off
-                    a feedback cycle in which the immediate relief is traded for
-                    long-term impairment. One of their research participants
-                    described the survival dynamics of PUBG in terms of
-                    self-empowerment, labeling it as a space in which "I feel in
-                    control" (Sunil et al., 2021).
+                    playing PUBG and increased rates of anxiety, attention
+                    deficit hyperactivity disorder (ADHD), and even suicidal
+                    tendencies. According to the authors, playing PUBG is an
+                    unhealthy way of dealing with stress for pre-existing mental
+                    conditions, setting off a feedback cycle in which the
+                    immediate relief is traded for long-term impairment. One of
+                    their research participants described the survival dynamics
+                    of PUBG in terms of self-empowerment, labeling it as a space
+                    in which "I feel in control" (Sunil et al., 2021).
                 </p>
                 <p>
                     This placebo of agency is the key element in PUBG's hedonic
@@ -204,6 +242,19 @@ export default function IAT210ResearchEssay() {
                     Consequently, players don't play PUBG, they schedule their
                     lives around playing PUBG (Sunil et al., 2021).
                 </p>
+                <div className="my-10">
+                    <Image
+                        src="/images/pubg2.jpg"
+                        alt="PUBG school zone tactical screenshot"
+                        width={850}
+                        height={480}
+                        className="rounded-lg shadow-md mx-auto"
+                    />
+                    <p className="text-center text-sm text-gray-500 mt-2">
+                        Figure 4: Entering the School zone — a notorious hotspot
+                        for close-range combat and early-game survival pressure.
+                    </p>
+                </div>
 
                 <h2 className="text-2xl font-semibold">
                     III. How PlayerUnknown's Battlegrounds Developed Its
@@ -277,6 +328,20 @@ export default function IAT210ResearchEssay() {
                     player groups as well as inform similar designs in games
                     like Call of Duty: Warzone and Apex Legends (Wang, 2021).
                 </p>
+                <div className="my-10">
+                    <Image
+                        src="/images/pubg3.jpg"
+                        alt="PUBG player riding a motorcycle across open terrain"
+                        width={1280}
+                        height={720}
+                        className="rounded-lg shadow-md mx-auto"
+                    />
+                    <p className="text-center text-sm text-gray-500 mt-2">
+                        Figure 5: Player traversing the open field — vehicle use
+                        enhances PUBG’s risk-reward gameplay and mobility
+                        tension.
+                    </p>
+                </div>
 
                 <h2 className="text-2xl font-semibold">Conclusion</h2>
                 <p>
