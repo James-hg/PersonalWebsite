@@ -151,7 +151,7 @@ export default function IAT210ResearchEssay() {
                 <p></p>
                 <div className="my-10">
                     <Image
-                        src="/images/pubg-erangle-map.webp"
+                        src="/images/pubg-erangle-map.png"
                         alt="Erangel map in PUBG"
                         width={900}
                         height={900}
