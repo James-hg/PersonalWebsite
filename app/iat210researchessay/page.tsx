@@ -19,12 +19,17 @@ export default function IAT210ResearchEssay() {
                     className="rounded-lg shadow-md mx-auto"
                 />
                 <p className="text-center text-sm text-gray-500 mt-2">
-                    Figure 1: Iconic promotional artwork featuring the main PUBG
-                    character in a war-torn zone.
+                    Figure 1: PUBG cover image.
+                    <br />
+                    <span className="italic">
+                        Source: Unknown. (n.d.). PUBG cover art [Image]. Pxfuel.
+                        https://www.pxfuel.com/en/desktop-wallpaper-fijgm
+                    </span>
                 </p>
             </div>
+
             <section className="space-y-6 text-lg leading-relaxed">
-                <h2>
+                <h2 className="text-2xl font-semibold">
                     <strong>Introduction</strong>
                 </h2>
                 <p>
@@ -73,14 +78,19 @@ export default function IAT210ResearchEssay() {
                 <div className="my-10">
                     <Image
                         src="/images/pubg1.jpeg"
-                        alt="PUBG aiming at farm village"
-                        width={1200}
-                        height={700}
+                        alt="PUBG wheat field sniper scene"
+                        width={1000}
+                        height={600}
                         className="rounded-lg shadow-md mx-auto"
                     />
                     <p className="text-center text-sm text-gray-500 mt-2">
-                        Figure 2: Simulated battleground in PUBG — a player
-                        scopes in on rural terrain.
+                        Figure 2: PUBG in-game wheat field sniper scene.
+                        <br />
+                        <span className="italic">
+                            Source: Reddit user. (n.d.). PUBG wheat sniper
+                            screenshot [Image]. Reddit.
+                            https://i.redd.it/qgzqmyl5bkyc1.jpeg
+                        </span>
                     </p>
                 </div>
 
@@ -151,15 +161,20 @@ export default function IAT210ResearchEssay() {
                 <p></p>
                 <div className="my-10">
                     <Image
-                        src="/images/pubgeranglemap.png"
-                        alt="Erangel map in PUBG"
-                        width={900}
-                        height={900}
+                        src="/images/pubg2.jpg"
+                        alt="PUBG school zone shootout"
+                        width={1000}
+                        height={600}
                         className="rounded-lg shadow-md mx-auto"
                     />
                     <p className="text-center text-sm text-gray-500 mt-2">
-                        Figure 3: The Erangel map layout — PUBG’s first
-                        large-scale battle arena.
+                        Figure 3: PUBG in-game school zone scene.
+                        <br />
+                        <span className="italic">
+                            Source: Unknown. (n.d.). PUBG school battle [Image].
+                            Pxfuel.
+                            https://www.pxfuel.com/en/desktop-wallpaper-jlcah
+                        </span>
                     </p>
                 </div>
 
@@ -244,15 +259,20 @@ export default function IAT210ResearchEssay() {
                 </p>
                 <div className="my-10">
                     <Image
-                        src="/images/pubg2.jpg"
-                        alt="PUBG school zone tactical screenshot"
-                        width={850}
-                        height={480}
+                        src="/images/pubgeranglemap.png"
+                        alt="PUBG Erangel map layout"
+                        width={1000}
+                        height={600}
                         className="rounded-lg shadow-md mx-auto"
                     />
                     <p className="text-center text-sm text-gray-500 mt-2">
-                        Figure 4: Entering the School zone — a notorious hotspot
-                        for close-range combat and early-game survival pressure.
+                        Figure 4: PUBG Erangle map.
+                        <br />
+                        <span className="italic">
+                            Source: Unknown. (n.d.). PUBG Erangel map overview
+                            [Image]. Pxfuel.
+                            https://www.pxfuel.com/en/desktop-wallpaper-fzxhn
+                        </span>
                     </p>
                 </div>
 
@@ -331,15 +351,19 @@ export default function IAT210ResearchEssay() {
                 <div className="my-10">
                     <Image
                         src="/images/pubg3.jpg"
-                        alt="PUBG player riding a motorcycle across open terrain"
-                        width={1280}
-                        height={720}
+                        alt="PUBG motorcycle traversal"
+                        width={1000}
+                        height={600}
                         className="rounded-lg shadow-md mx-auto"
                     />
                     <p className="text-center text-sm text-gray-500 mt-2">
-                        Figure 5: Player traversing the open field — vehicle use
-                        enhances PUBG’s risk-reward gameplay and mobility
-                        tension.
+                        Figure 5: PUBG in-game motercycle scene.
+                        <br />
+                        <span className="italic">
+                            Source: Unknown. (n.d.). PUBG motorbike terrain ride
+                            [Image]. Pxfuel.
+                            https://www.pxfuel.com/en/desktop-wallpaper-hbxjx
+                        </span>
                     </p>
                 </div>
 
@@ -371,82 +395,102 @@ export default function IAT210ResearchEssay() {
                     PUBG is a game but also a symptom of our playable crisis.
                 </p>
                 <br />
-                <br />
+                <div className="my-10">
+                    <Image
+                        src="/images/pubg4.jpg"
+                        alt="PUBG squad in explosion scene"
+                        width={1000}
+                        height={600}
+                        className="rounded-lg shadow-md mx-auto"
+                    />
+                    <p className="text-center text-sm text-gray-500 mt-2">
+                        Figure 6: PUBG in-game knocking scene.
+                        <br />
+                        <span className="italic">
+                            Source: Unknown. (n.d.). PUBG squad wallpaper
+                            [Image]. Pxfuel.
+                            https://www.pxfuel.com/en/desktop-wallpaper-jlcah
+                        </span>
+                    </p>
+                </div>
+
                 <h2 className="text-xl font-semibold">References</h2>
                 <ul className="list-disc list-inside">
                     <li>
-                        Nazir, R. (2021). Increasing effects of PUBG playing: A
-                        study of youth behavior in Pakistan. Pakistan Journal of
-                        Social Research, 3(4), 1084–1094. Retrieved from <br />
                         <a
                             href="https://www.pjsr.com.pk/wp-content/uploads/2022/03/70.-Vol-3.-Issue-4.-Dec-2021-Nazir-Increasing-Effects-of-PUBG-Playing.pdf"
                             target="_blank"
                         >
+                            Nazir, R. (2021). Increasing effects of PUBG
+                            playing: A study of youth behavior in Pakistan.
+                            Pakistan Journal of Social Research, 3(4),
+                            1084–1094. Retrieved from
+                            <br />
                             https://www.pjsr.com.pk/wp-content/uploads/2022/03/70.-Vol-3.-Issue-4.-Dec-2021-Nazir-Increasing-Effects-of-PUBG-Playing.pdf
                         </a>
                     </li>
                     <li>
-                        Raza, S., Naveed, R., Asim, M., Hassan, S., & Kanwal, R.
-                        (2024). Impact of the violent video game on the social
-                        behavior of players: A study of young PUBG players.
-                        Pakistan Journal of Social Sciences, 10(1), 23–34.
-                        Retrieved from
-                        <br />
                         <a
                             href="https://www.researchgate.net/publication/384386589"
                             target="_blank"
                         >
+                            Raza, S., Naveed, R., Asim, M., Hassan, S., &
+                            Kanwal, R. (2024). Impact of the violent video game
+                            on the social behavior of players: A study of young
+                            PUBG players. Pakistan Journal of Social Sciences,
+                            10(1), 23–34. Retrieved from
+                            <br />
                             https://www.researchgate.net/publication/384386589
                         </a>
                     </li>
                     <li>
-                        Rehman, S. U., Waheed, M., & Ahmad, N. (2022).
-                        Playful-consumption and behavioral intention: A study of
-                        PUBG players. Frontiers in Psychology, 13, 909875.
-                        Retrieved from
-                        <br />
                         <a
                             href="https://doi.org/10.3389/fpsyg.2022.909875"
                             target="_blank"
                         >
+                            Rehman, S. U., Waheed, M., & Ahmad, N. (2022).
+                            Playful-consumption and behavioral intention: A
+                            study of PUBG players. Frontiers in Psychology, 13,
+                            909875. Retrieved from
+                            <br />
                             https://doi.org/10.3389/fpsyg.2022.909875
                         </a>
                     </li>
                     <li>
-                        Sihombing, L. H. (2022). PUBG: Between real and unreal.
-                        Jurnal Humaniora Teknologi dan Industri Kreatif, 1(2),
-                        1–9. Retrieved from
-                        <br />
                         <a
                             href="https://www.researchgate.net/publication/365599978_PUBG_BETWEEN_REAL_AND_UNREAL"
                             target="_blank"
                         >
+                            Sihombing, L. H. (2022). PUBG: Between real and
+                            unreal. Jurnal Humaniora Teknologi dan Industri
+                            Kreatif, 1(2), 1–9. Retrieved from
+                            <br />
                             https://www.researchgate.net/publication/365599978_PUBG_BETWEEN_REAL_AND_UNREAL
                         </a>
                     </li>
                     <li>
-                        Sunil, S., Sharma, M. K., & Anand, N. (2021). Impact of
-                        PlayerUnknown’s Battlegrounds (PUBG) on mental health.
-                        Indian Journal of Psychological Medicine, 43(3),
-                        255–260. Retrieved from
-                        <br />
                         <a
                             href="https://doi.org/10.1177/0025817220981817"
                             target="_blank"
                         >
+                            Sunil, S., Sharma, M. K., & Anand, N. (2021). Impact
+                            of PlayerUnknown’s Battlegrounds (PUBG) on mental
+                            health. Indian Journal of Psychological Medicine,
+                            43(3), 255–260. Retrieved from
+                            <br />
                             https://doi.org/10.1177/0025817220981817
                         </a>
                     </li>
                     <li>
-                        Wang, Y. (2021). The evolving game mechanics in esports
-                        first-person shooter games (Master’s thesis,
-                        Northeastern University). Northeastern University
-                        Digital Repository. Retrieved from
-                        <br />
                         <a
                             href="https://repository.library.northeastern.edu/files/neu%3Abz61dw730/fulltext.pdf"
                             target="_blank"
                         >
+                            Wang, Y. (2021). The evolving game mechanics in
+                            esports first-person shooter games (Master’s thesis,
+                            Northeastern University). Northeastern University
+                            Digital Repository. Retrieved from
+                            <br />
                             https://repository.library.northeastern.edu/files/neu%3Abz61dw730/fulltext.pdf
                         </a>
                     </li>
