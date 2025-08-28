@@ -24,7 +24,7 @@ export default function GameplayInsightsSection() {
                             like Security or Supervisor. Patrons rely on
                             calculated sabotage, silence abilities, and roles
                             like Chameleon and Disruptor to sow confusion and
-                            fracture the Lifeguards’ trust. Both teams navigate
+                            fracture the Lifeguards' trust. Both teams navigate
                             evolving probabilities: sabotage success increases
                             with misdirected guards, while investigations become
                             more accurate as patterns emerge. Players face
@@ -57,7 +57,7 @@ export default function GameplayInsightsSection() {
                             <li>
                                 Using Whistle Marshal or Disruptor abilities at
                                 the right moments can silence critical players,
-                                stalling the opposing team’s momentum and
+                                stalling the opposing team's momentum and
                                 shifting debates in your favor.
                             </li>
                             <li>
@@ -73,7 +73,7 @@ export default function GameplayInsightsSection() {
                                 delays their victory.
                             </li>
                             <li>
-                                Rescue Diver’s one-time elimination power can be
+                                Rescue Diver's one-time elimination power can be
                                 a game changer if used soon after sabotage, but
                                 waiting too long risks missing the opportunity
                                 entirely.
@@ -82,7 +82,7 @@ export default function GameplayInsightsSection() {
                                 Protecting the Sleeper Lifeguard is a critical
                                 dilemma for Lifeguards, as losing them to the
                                 Recruiter Patron can instantly swing the game in
-                                the Patrons’ favor.
+                                the Patrons' favor.
                             </li>
                             <li>
                                 Tethered Patron introduces high risk stakes to
@@ -192,20 +192,20 @@ export default function GameplayInsightsSection() {
                         </p>
                         <ul className="list-decimal list-inside text-gray-700 mb-4 space-y-1">
                             <li>
-                                Leader Patron – Choose sabotage pool & target
+                                Leader Patron - Choose sabotage pool & target
                                 player (15s)
                             </li>
                             <li>
-                                Disruptor Patron – Select player to mute (15s)
+                                Disruptor Patron - Select player to mute (15s)
                             </li>
                             <li>
-                                Recruiter Patron – Attempt conversion (if not
+                                Recruiter Patron - Attempt conversion (if not
                                 yet used) (15s)
                             </li>
                             <li>
-                                Tethered Patron – Choose player to tether (15s)
+                                Tethered Patron - Choose player to tether (15s)
                             </li>
-                            <li>All Patrons – Confirm sabotage (30s)</li>
+                            <li>All Patrons - Confirm sabotage (30s)</li>
                         </ul>
 
                         <p className="text-gray-700 mb-2 font-semibold">
@@ -213,24 +213,24 @@ export default function GameplayInsightsSection() {
                         </p>
                         <ul className="list-decimal list-inside text-gray-700 mb-4 space-y-1">
                             <li>
-                                Lifeguards – Assign guards to pools (each 15s,
+                                Lifeguards - Assign guards to pools (each 15s,
                                 total ~45s)
                             </li>
                             <li>
-                                Security – Investigate player alignment (15s)
+                                Security - Investigate player alignment (15s)
                             </li>
-                            <li>Security Bodyguard – Protect a player (15s)</li>
+                            <li>Security Bodyguard - Protect a player (15s)</li>
                             <li>
-                                Doctor – Protect a player from elimination (15s)
+                                Doctor - Protect a player from elimination (15s)
                             </li>
                             <li>
-                                Rescue Diver – Optionally eliminate (if
+                                Rescue Diver - Optionally eliminate (if
                                 unlocked) (15s)
                             </li>
-                            <li>Whistle Marshal – Silence a player (15s)</li>
-                            <li>Camera Observer – Observe one pool (15s)</li>
+                            <li>Whistle Marshal - Silence a player (15s)</li>
+                            <li>Camera Observer - Observe one pool (15s)</li>
                             <li>
-                                Supervisor – Learn if a player performed an
+                                Supervisor - Learn if a player performed an
                                 action (15s)
                             </li>
                         </ul>
@@ -293,7 +293,7 @@ export default function GameplayInsightsSection() {
                                 Each day: max 9 mins per day. <br />
                                 Assume 10 days to win → max ~90 mins (1h30).{" "}
                                 <br />
-                                However, most playtesting ends between 60–90
+                                However, most playtesting ends between 60-90
                                 mins, depending on player's discussions,
                                 eliminations, and information retrieves from
                                 Lifeguards investigators.

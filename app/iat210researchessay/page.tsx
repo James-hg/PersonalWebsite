@@ -312,7 +312,7 @@ export default function IAT210ResearchEssay() {
                     these high-stakes experiences promote the acquisition of
                     aggressive behavior as well as reduced frustration tolerance
                     in underage players (Raza et al., 2024). Nazir (2021)
-                    highlights how PUBG’s continuous challenges and competitive
+                    highlights how PUBG's continuous challenges and competitive
                     nature sustain engagement, especially among players seeking
                     dominance and excitement.
                 </p>
@@ -424,7 +424,7 @@ export default function IAT210ResearchEssay() {
                             Nazir, R. (2021). Increasing effects of PUBG
                             playing: A study of youth behavior in Pakistan.
                             Pakistan Journal of Social Research, 3(4),
-                            1084–1094. Retrieved from
+                            1084-1094. Retrieved from
                             <br />
                             https://www.pjsr.com.pk/wp-content/uploads/2022/03/70.-Vol-3.-Issue-4.-Dec-2021-Nazir-Increasing-Effects-of-PUBG-Playing.pdf
                         </a>
@@ -438,7 +438,7 @@ export default function IAT210ResearchEssay() {
                             Kanwal, R. (2024). Impact of the violent video game
                             on the social behavior of players: A study of young
                             PUBG players. Pakistan Journal of Social Sciences,
-                            10(1), 23–34. Retrieved from
+                            10(1), 23-34. Retrieved from
                             <br />
                             https://www.researchgate.net/publication/384386589
                         </a>
@@ -463,7 +463,7 @@ export default function IAT210ResearchEssay() {
                         >
                             Sihombing, L. H. (2022). PUBG: Between real and
                             unreal. Jurnal Humaniora Teknologi dan Industri
-                            Kreatif, 1(2), 1–9. Retrieved from
+                            Kreatif, 1(2), 1-9. Retrieved from
                             <br />
                             https://www.researchgate.net/publication/365599978_PUBG_BETWEEN_REAL_AND_UNREAL
                         </a>
@@ -474,9 +474,9 @@ export default function IAT210ResearchEssay() {
                             target="_blank"
                         >
                             Sunil, S., Sharma, M. K., & Anand, N. (2021). Impact
-                            of PlayerUnknown’s Battlegrounds (PUBG) on mental
+                            of PlayerUnknown's Battlegrounds (PUBG) on mental
                             health. Indian Journal of Psychological Medicine,
-                            43(3), 255–260. Retrieved from
+                            43(3), 255-260. Retrieved from
                             <br />
                             https://doi.org/10.1177/0025817220981817
                         </a>
@@ -487,7 +487,7 @@ export default function IAT210ResearchEssay() {
                             target="_blank"
                         >
                             Wang, Y. (2021). The evolving game mechanics in
-                            esports first-person shooter games (Master’s thesis,
+                            esports first-person shooter games (Master's thesis,
                             Northeastern University). Northeastern University
                             Digital Repository. Retrieved from
                             <br />

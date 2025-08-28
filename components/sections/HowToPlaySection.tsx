@@ -263,6 +263,7 @@ export default function HowToPlaySection() {
                     </Card>
                 </div>
             </div>
+            {/* Rule book download button */}
             <div className="text-center mt-12">
                 <a
                     href="/RuleBook.pdf"

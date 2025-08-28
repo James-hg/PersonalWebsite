@@ -25,12 +25,12 @@ export default function BackstorySection() {
                         a secret group of Patrons, frustrated by rising
                         admission costs and poor maintenance, have banded
                         together and are scheming against the lifeguards. By
-                        night, these saboteurs plan to force the pool’s closure
+                        night, these saboteurs plan to force the pool's closure
                         through calculated acts of mischief and chaos: dye
                         bombs, drain clogs, and damage to the pool.
                     </p>
                     <p>
-                        The lifeguards, the city’s first line of defense for of
+                        The lifeguards, the city's first line of defense for of
                         fun and safety, are sworn to protect the pool at all
                         costs. They form a union of specialized roles, each
                         using their unique skills to detect, protect, and

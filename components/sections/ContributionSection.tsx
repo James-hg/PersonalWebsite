@@ -6,7 +6,7 @@ export default function ContributionSection() {
                     Team Contributions
                 </h2>
                 <p className="text-gray-700 max-w-2xl mx-auto mb-6">
-                    Each team member’s contributions are detailed below.
+                    Each team member's contributions are detailed below.
                     Percentages are approximate.
                 </p>
                 <ul className="space-y-4 text-left max-w-xl mx-auto">

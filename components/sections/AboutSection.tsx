@@ -1,14 +1,6 @@
 "use client";
 import { Card } from "@/components/ui/card";
-import {
-    Users,
-    Waves,
-    Timer,
-    Lightbulb,
-    Target,
-    ShieldCheck,
-    UserRound,
-} from "lucide-react";
+import { Lightbulb, Target, UserRound } from "lucide-react";
 
 export default function AboutSection() {
     return (
