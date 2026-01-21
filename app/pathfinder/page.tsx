@@ -257,22 +257,6 @@ export default function PathfinderPage() {
                             </p>
                         </div>
 
-                        <div className="rounded-3xl border border-dashed border-slate-300 bg-white/80 p-6 shadow-lg">
-                            <div className="flex aspect-video items-center justify-center rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-amber-50 text-center">
-                                <div className="space-y-2 px-6">
-                                    <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
-                                        Demo Video Slot
-                                    </p>
-                                    <p className="text-lg font-semibold text-slate-800">
-                                        Upload or embed your video here.
-                                    </p>
-                                </div>
-                            </div>
-                            <p className="mt-4 text-xs text-slate-500">
-                                Replace this card with a &lt;video&gt; tag or an
-                                embed when the demo is ready.
-                            </p>
-                        </div>
                     </header>
 
                     <section className="mt-14 rounded-3xl border border-white/50 bg-white/80 p-8 shadow-xl backdrop-blur">
