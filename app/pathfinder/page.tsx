@@ -155,8 +155,7 @@ function parseMarkdown(markdown: string): MarkdownBlock[] {
 
 function renderInline(text: string) {
     const nodes: ReactNode[] = [];
-    const tokenRegex =
-        /(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\)|`[^`]+`)/g;
+    const tokenRegex = /(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\)|`[^`]+`)/g;
     let lastIndex = 0;
     let match: RegExpExecArray | null = tokenRegex.exec(text);
     let keyIndex = 0;
@@ -171,7 +170,7 @@ function renderInline(text: string) {
             nodes.push(
                 <strong key={`bold-${keyIndex++}`}>
                     {token.slice(2, -2)}
-                </strong>
+                </strong>,
             );
         } else if (token.startsWith("`")) {
             nodes.push(
@@ -180,12 +179,10 @@ function renderInline(text: string) {
                     className="rounded bg-slate-100 px-1 py-0.5 text-sm text-slate-700"
                 >
                     {token.slice(1, -1)}
-                </code>
+                </code>,
             );
         } else if (token.startsWith("[")) {
-            const linkMatch = token.match(
-                /^\[([^\]]+)\]\(([^)]+)\)$/
-            );
+            const linkMatch = token.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
             if (linkMatch) {
                 nodes.push(
                     <a
@@ -194,7 +191,7 @@ function renderInline(text: string) {
                         className="font-semibold text-slate-900 underline decoration-amber-400 decoration-2 underline-offset-4 transition hover:text-slate-700"
                     >
                         {linkMatch[1]}
-                    </a>
+                    </a>,
                 );
             } else {
                 nodes.push(token);
@@ -215,7 +212,12 @@ function renderInline(text: string) {
 }
 
 function getMarkdownContent() {
-    const filePath = path.join(process.cwd(), "pathfinder.md");
+    const filePath = path.join(
+        process.cwd(),
+        "public",
+        "pathfinder",
+        "pathfinder.md",
+    );
     return fs.readFileSync(filePath, "utf8");
 }
 
@@ -251,11 +253,7 @@ export default function PathfinderPage() {
                             </h1>
                             <p className="mt-4 text-lg text-slate-600">
                                 A guided look at the Pathfinder Travel Advisor
-                                experience, plus the full project brief from
-                                <code className="ml-1 rounded bg-white/70 px-1 py-0.5 text-sm text-slate-600">
-                                    pathfinder.md
-                                </code>
-                                .
+                                experience.
                             </p>
                         </div>
 
@@ -271,8 +269,8 @@ export default function PathfinderPage() {
                                 </div>
                             </div>
                             <p className="mt-4 text-xs text-slate-500">
-                                Replace this card with a &lt;video&gt; tag or
-                                an embed when the demo is ready.
+                                Replace this card with a &lt;video&gt; tag or an
+                                embed when the demo is ready.
                             </p>
                         </div>
                     </header>
@@ -327,7 +325,7 @@ export default function PathfinderPage() {
                                                     >
                                                         {renderInline(item)}
                                                     </li>
-                                                )
+                                                ),
                                             )}
                                         </ul>
                                     );
@@ -357,13 +355,32 @@ export default function PathfinderPage() {
 
                                 if (block.type === "image") {
                                     const isRemote = /^https?:\/\//.test(
-                                        block.src
+                                        block.src,
                                     );
+                                    const cleanedSrc = block.src.replace(
+                                        /^\.?\//,
+                                        "",
+                                    );
+                                    const publicSrc = cleanedSrc.startsWith(
+                                        "pathfinder/",
+                                    )
+                                        ? `/${cleanedSrc}`
+                                        : `/pathfinder/${cleanedSrc}`;
+                                    const altText = block.alt.toLowerCase();
+                                    const isCompactImage =
+                                        altText.includes("upcoming stops") ||
+                                        altText.includes("today's stops") ||
+                                        altText.includes("summary cards") ||
+                                        altText.includes("sidebar widget") ||
+                                        altText.includes("ai travel coach");
+                                    const figureClass = isCompactImage
+                                        ? "mx-auto max-w-xl"
+                                        : "";
                                     if (isRemote) {
                                         return (
                                             <figure
                                                 key={`image-${index}`}
-                                                className="overflow-hidden rounded-2xl border border-slate-200 bg-white"
+                                                className={`overflow-hidden rounded-2xl border border-slate-200 bg-white ${figureClass}`}
                                             >
                                                 <img
                                                     src={block.src}
@@ -382,18 +399,18 @@ export default function PathfinderPage() {
                                     return (
                                         <figure
                                             key={`image-${index}`}
-                                            className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-6 text-slate-600"
+                                            className={`overflow-hidden rounded-2xl border border-slate-200 bg-white ${figureClass}`}
                                         >
-                                            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">
-                                                Image Placeholder
-                                            </p>
-                                            <p className="mt-3 text-base font-semibold text-slate-800">
-                                                {block.alt}
-                                            </p>
-                                            <p className="mt-2 text-xs text-slate-500">
-                                                Expected file: public/
-                                                {block.src}
-                                            </p>
+                                            <img
+                                                src={publicSrc}
+                                                alt={block.alt}
+                                                className="h-auto w-full"
+                                            />
+                                            {block.alt ? (
+                                                <figcaption className="px-4 py-3 text-sm text-slate-600">
+                                                    {block.alt}
+                                                </figcaption>
+                                            ) : null}
                                         </figure>
                                     );
                                 }
