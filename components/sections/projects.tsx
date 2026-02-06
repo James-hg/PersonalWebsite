@@ -8,7 +8,7 @@ export default function Projects() {
     const projects = [
         {
             id: "quizzz",
-            title: "Quizzz Automation",
+            title: "Quizzz - AI Assisted Quiz Generation",
             description:
                 "A full-stack app for students to revise via multiple choice questions",
             tech: ["Python FastAPI", "React", "PostgreSQL", "Docker"],
@@ -35,6 +35,13 @@ export default function Projects() {
                 "Creative coding project exploring digital art generation and real-time rendering",
             tech: ["React", "Tailwind"],
             link: "/iat210",
+        },
+        {
+            id: "novel-to-audio",
+            title: "Novel to Audiobook Automation",
+            description: "Convert a text novel to an audiobook",
+            tech: ["React", "Tailwind"],
+            link: "/novel-to-audio",
         },
     ];
 
