@@ -34,17 +34,18 @@ export default function NovelToAudioProject() {
                     transition={{ duration: 0.8 }}
                 >
                     <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-4">
-                        Interactive Art Tool
+                        Novel to Audiobook
                     </h1>
                     <p className="text-xl text-muted-foreground mb-8">
-                        A creative coding project exploring digital art
-                        generation and real-time rendering with Three.js
+                        An automated pipeline that converts web novels into
+                        long-form audiobooks using AI-assisted text processing
+                        and text-to-speech synthesis.
                     </p>
 
                     <div className="flex gap-4 mb-12">
                         <motion.a
                             whileHover={{ scale: 1.05 }}
-                            href="https://github.com"
+                            href="https://github.com/James-hg/novel_to_audio"
                             className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold"
                         >
                             <Github className="w-5 h-5" />
@@ -52,11 +53,11 @@ export default function NovelToAudioProject() {
                         </motion.a>
                         <motion.a
                             whileHover={{ scale: 1.05 }}
-                            href="/iat210/boardgame"
+                            href=""
                             className="flex items-center gap-2 px-6 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/5"
                         >
                             <ExternalLink className="w-5 h-5" />
-                            Live Demo
+                            Stay tuned
                         </motion.a>
                     </div>
 
@@ -72,13 +73,17 @@ export default function NovelToAudioProject() {
                                 Overview
                             </h2>
                             <p className="text-lg text-muted-foreground leading-relaxed">
-                                An interactive web application that generates
-                                procedural digital art in real-time. The project
-                                demonstrates advanced graphics programming
-                                concepts including WebGL shaders, particle
-                                systems, and algorithmic art generation. Users
-                                can interact with the canvas to create unique
-                                visual experiences.
+                                Novel to Audiobook is a Python-based automation
+                                project that transforms raw web novel text into
+                                coherent, chapter-length audiobooks. The system
+                                handles text cleaning, segmentation, and
+                                narration orchestration, removing the need for
+                                manual preprocessing and voice recording.
+                                <br />
+                                <br />
+                                The project focuses on building a reliable
+                                pipeline for long-form audio generation rather
+                                than short, single-prompt outputs.
                             </p>
                         </section>
 
@@ -88,12 +93,11 @@ export default function NovelToAudioProject() {
                             </h2>
                             <ul className="space-y-3">
                                 {[
-                                    "Real-time 3D rendering with Three.js",
-                                    "Custom WebGL shaders for visual effects",
-                                    "Particle system animations",
-                                    "Interactive mouse and keyboard controls",
-                                    "Multiple art generation algorithms",
-                                    "Performance optimized for smooth 60 FPS",
+                                    "Automated conversion of web novels into audiobook-ready audio",
+                                    "AI-assisted text cleaning to remove noise and normalize raw content",
+                                    "Intelligent text segmentation for long-form narration",
+                                    "End-to-end orchestration from raw text to synthesized audio files",
+                                    "Support for chapter-length and multi-chapter content",
                                 ].map((feature, i) => (
                                     <motion.li
                                         key={i}
@@ -165,19 +169,19 @@ export default function NovelToAudioProject() {
                             <div className="space-y-6">
                                 {[
                                     {
-                                        title: "Custom Shader Pipeline",
+                                        title: "Raw web novel content often contains inconsistent formatting, ads, and noise that degrade narration quality",
                                         description:
-                                            "Implemented custom GLSL shaders for effects like bloom, color grading, and distortion mapping",
+                                            "Integrated AI-assisted text preprocessing to normalize content and produce clean, TTS-ready inputs.",
                                     },
                                     {
-                                        title: "Procedural Generation",
+                                        title: "Generating coherent audio for long chapters without TTS limits or voice inconsistency",
                                         description:
-                                            "Used Perlin noise and fractal algorithms to generate infinite variations of art",
+                                            "Implemented efficient text segmentation and orchestration to maintain narration flow across large inputs.",
                                     },
                                     {
-                                        title: "Performance Optimization",
+                                        title: "Ensuring the pipeline scales beyond small samples to full novels",
                                         description:
-                                            "Optimized rendering pipeline using instancing and batch rendering techniques",
+                                            "Designed the system as a modular pipeline, allowing reliable processing of multi-chapter content.",
                                     },
                                 ].map((item, i) => (
                                     <motion.div
@@ -204,10 +208,11 @@ export default function NovelToAudioProject() {
                             </h2>
                             <ul className="space-y-3">
                                 {[
-                                    "Mastered WebGL and shader programming",
-                                    "Understood graphics pipeline and rendering optimization",
-                                    "Implemented complex algorithmic art techniques",
-                                    "Optimized performance for real-time applications",
+                                    "Gained hands-on experience designing end-to-end automation pipelines for long-form content processing, from raw text ingestion to final audio output.",
+                                    "Developed a deeper understanding of AI-assisted text preprocessing, including cleaning noisy real-world data and preparing inputs for downstream systems.",
+                                    "Learned how to segment and orchestrate long-form text-to-speech workflows, balancing API limits, audio coherence, and narration quality.",
+                                    "Strengthened skills in integrating cloud-based AI services (LLMs and TTS) into a reliable, repeatable production pipeline.",
+                                    "Improved ability to design systems that scale beyond demos, focusing on robustness, modularity, and real-world constraints.",
                                 ].map((outcome, i) => (
                                     <motion.li
                                         key={i}

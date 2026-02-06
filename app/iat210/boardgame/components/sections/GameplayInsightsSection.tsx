@@ -28,9 +28,9 @@ export default function GameplayInsightsSection() {
                             evolving probabilities: sabotage success increases
                             with misdirected guards, while investigations become
                             more accurate as patterns emerge. Players face
-                            constant trade-offs — pursue aggressive eliminations
+                            constant trade-offs - pursue aggressive eliminations
                             or keep cover, protect one player or spread defense
-                            — leading to shifting alliances and momentum swings.
+                            - leading to shifting alliances and momentum swings.
                             Every round amplifies tension, rewarding clever
                             deduction, psychological strategy, and well-timed
                             role abilities over sheer luck. The interplay of

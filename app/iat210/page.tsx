@@ -204,10 +204,11 @@ export default function IAT210Project() {
                             </h2>
                             <ul className="space-y-3">
                                 {[
-                                    "Mastered WebGL and shader programming",
-                                    "Understood graphics pipeline and rendering optimization",
-                                    "Implemented complex algorithmic art techniques",
-                                    "Optimized performance for real-time applications",
+                                    "Applied core game design theories such as mechanics–dynamics–aesthetics (MDA) to analyze how rules and systems shape player experience and emotional response.",
+                                    "Developed an understanding of player decision-making and feedback loops, examining how information, risk, and reward influence strategic choices over multiple turns.",
+                                    "Analyzed balance, dominant strategies, and emergent gameplay, iterating on rules to prevent degenerate strategies and encourage meaningful player agency.",
+                                    "Explored the role of conflict, uncertainty, and goals in sustaining engagement, drawing connections between theoretical models and observed playtest behavior.",
+                                    "Strengthened critical reflection skills by evaluating the game through formal analysis and playtesting data, linking theoretical concepts to concrete design revisions.",
                                 ].map((outcome, i) => (
                                     <motion.li
                                         key={i}

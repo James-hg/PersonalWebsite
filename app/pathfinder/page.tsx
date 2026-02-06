@@ -34,29 +34,22 @@ export default function PathfinderProject() {
                     transition={{ duration: 0.8 }}
                 >
                     <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-4">
-                        Experience Sharing Platform
+                        Pathfinder
                     </h1>
                     <p className="text-xl text-muted-foreground mb-8">
-                        A full-stack social platform for sharing and discovering
-                        personal experiences with others
+                        An AI-powered travel planning application that
+                        transforms natural-language requests into structured,
+                        location-aware itineraries.
                     </p>
 
                     <div className="flex gap-4 mb-12">
-                        <motion.a
-                            whileHover={{ scale: 1.05 }}
-                            href="https://github.com"
-                            className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold"
-                        >
-                            <Github className="w-5 h-5" />
-                            View Code
-                        </motion.a>
                         <motion.a
                             whileHover={{ scale: 1.05 }}
                             href="#"
                             className="flex items-center gap-2 px-6 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/5"
                         >
                             <ExternalLink className="w-5 h-5" />
-                            Live Demo
+                            Stay tuned:)
                         </motion.a>
                     </div>
 
@@ -72,14 +65,20 @@ export default function PathfinderProject() {
                                 Overview
                             </h2>
                             <p className="text-lg text-muted-foreground leading-relaxed">
-                                This project is a comprehensive social platform
-                                built with modern web technologies. It allows
-                                users to share their personal experiences,
-                                connect with others, and discover unique stories
-                                from around the world. The platform includes
-                                real-time notifications, user authentication,
-                                and a sophisticated matching algorithm to
-                                suggest relevant experiences.
+                                Pathfinder is a full-stack travel planning app
+                                built during a 24-hour hackathon. It allows
+                                users to describe travel plans in natural
+                                language and instantly receive a structured,
+                                editable itinerary. The system combines large
+                                language models with real-time mapping data to
+                                produce location-aware recommendations and
+                                optimized routes.
+                                <br />
+                                <br />
+                                The project focuses on fast backend
+                                orchestration, AI integration, and turning
+                                unstructured user input into usable planning
+                                data.
                             </p>
                         </section>
 
@@ -89,12 +88,11 @@ export default function PathfinderProject() {
                             </h2>
                             <ul className="space-y-3">
                                 {[
-                                    "User authentication with OAuth integration",
-                                    "Real-time experience feed with WebSocket support",
-                                    "Advanced search and filtering capabilities",
-                                    "User profile management and customization",
-                                    "Community engagement through likes and comments",
-                                    "Responsive design for mobile and desktop",
+                                    "Natural-language travel planning (e.g., “3 days in Tokyo with food and museums”)",
+                                    "AI-generated, structured itineraries with editable sections",
+                                    "Location-aware recommendations powered by live map data",
+                                    "Intelligent place suggestions and routing based on user intent",
+                                    "End-to-end flow from free-text input to actionable travel plans",
                                 ].map((feature, i) => (
                                     <motion.li
                                         key={i}
@@ -167,20 +165,21 @@ export default function PathfinderProject() {
                                 {[
                                     {
                                         challenge:
-                                            "Scaling real-time notifications",
+                                            "Parsing vague or ambiguous natural-language travel requests into structured itinerary data",
                                         solution:
-                                            "Implemented WebSocket connections with Redis pub/sub for efficient message distribution",
+                                            "Designed custom prompt structures and backend orchestration to consistently transform free-text input into well-defined itinerary objects.",
                                     },
                                     {
                                         challenge:
-                                            "Database query optimization",
+                                            "Ensuring recommendations are relevant to real-world locations and distances",
                                         solution:
-                                            "Added strategic indexing and implemented query caching with Redis",
+                                            "Combined LLM-generated plans with real-time Google Maps data to validate locations, calculate routes, and refine suggestions.",
                                     },
                                     {
-                                        challenge: "User experience on mobile",
+                                        challenge:
+                                            "Delivering a complete product within a 24-hour hackathon timeframe",
                                         solution:
-                                            "Built responsive components and optimized bundle size for faster load times",
+                                            "Prioritized backend logic and core user flow, enabling a functional end-to-end experience with minimal UI overhead.",
                                     },
                                 ].map((item, i) => (
                                     <motion.div
@@ -205,6 +204,33 @@ export default function PathfinderProject() {
                                     </motion.div>
                                 ))}
                             </div>
+                        </section>
+                        <section>
+                            <h2 className="text-3xl font-bold text-foreground mb-4">
+                                Learning Outcomes
+                            </h2>
+                            <ul className="space-y-3">
+                                {[
+                                    "Gained experience translating natural-language user input into structured, actionable data using large language models.",
+                                    "Learned how to combine LLM-generated outputs with real-time external APIs (Google Maps) to produce location-aware, practical results.",
+                                    "Strengthened backend orchestration skills by designing workflows that transform free-text requests into editable travel itineraries.",
+                                    "Developed an understanding of prompt design and constraint enforcement to keep AI-generated plans consistent and usable.",
+                                    "Improved rapid prototyping skills by delivering a complete, end-to-end product within a 24-hour hackathon timeframe.",
+                                ].map((outcome, i) => (
+                                    <motion.li
+                                        key={i}
+                                        initial={{ opacity: 0, x: -20 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: i * 0.1 }}
+                                        className="flex items-start gap-3 text-muted-foreground"
+                                    >
+                                        <span className="text-primary font-bold mt-1">
+                                            ✓
+                                        </span>
+                                        <span>{outcome}</span>
+                                    </motion.li>
+                                ))}
+                            </ul>
                         </section>
                     </motion.div>
                 </motion.div>
