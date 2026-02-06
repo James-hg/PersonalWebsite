@@ -27,7 +27,7 @@ export default function Navigation({
                     transition={{ delay: 0.2 }}
                     className="text-xl font-bold text-foreground"
                 >
-                    {"James Hoang"}
+                    {"@jameshoang"}
                 </motion.div>
 
                 <div className="flex gap-1">
