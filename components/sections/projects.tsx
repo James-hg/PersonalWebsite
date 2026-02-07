@@ -30,9 +30,8 @@ export default function Projects() {
         },
         {
             id: "iat210-boardgame",
-            title: "SFU Course Project",
-            description:
-                "Creative coding project exploring digital art generation and real-time rendering",
+            title: "Guard Duty",
+            description: "A board game prototype course project",
             tech: ["React", "Tailwind"],
             link: "/iat210",
         },
@@ -40,8 +39,22 @@ export default function Projects() {
             id: "novel-to-audio",
             title: "Novel to Audiobook Automation",
             description: "Convert a text novel to an audiobook",
-            tech: ["React", "Tailwind"],
+            tech: ["Python", "Gemini API", "Google TTS API"],
             link: "/novel-to-audio",
+        },
+        {
+            id: "red-corridor",
+            title: "Red Corridor",
+            description: "A grid-based maze game project",
+            tech: ["Java", "JavaFX"],
+            link: "/red-corridor",
+        },
+        {
+            id: "cmpt295",
+            title: "Insertion Sort Performance Analyzer",
+            description: "A course mini project to analyze Insertion Sort",
+            tech: ["C++", "Assembly"],
+            link: "/cmpt295",
         },
     ];
 

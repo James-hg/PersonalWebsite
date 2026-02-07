@@ -126,23 +126,23 @@ export default function QuizzzProject() {
                                     },
                                     {
                                         category: "Backend",
-                                        tech: "Python (FastAPI), ",
+                                        tech: "Python (FastAPI), REST APIs",
                                     },
                                     {
                                         category: "Database",
-                                        tech: "PostgreSQL, Redis",
+                                        tech: "PostgreSQL",
                                     },
                                     {
                                         category: "DevOps",
-                                        tech: "Docker, AWS, GitHub Actions",
+                                        tech: "Docker, Vercel",
                                     },
                                     {
                                         category: "Tools",
-                                        tech: "VS Code, Postman, Figma",
+                                        tech: "VS Code, Github",
                                     },
                                     {
-                                        category: "Testing",
-                                        tech: "Jest, React Testing Library",
+                                        category: "LLM/AI",
+                                        tech: "Gemma 3",
                                     },
                                 ].map((item) => (
                                     <motion.div

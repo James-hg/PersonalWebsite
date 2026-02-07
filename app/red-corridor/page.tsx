@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowLeft, Github, ExternalLink } from "lucide-react";
 
-export default function IAT210Project() {
+export default function RedCorridor() {
     return (
         <div className="min-h-screen bg-gradient-to-b from-background via-background to-secondary/20">
             {/* Header */}
@@ -34,30 +34,30 @@ export default function IAT210Project() {
                     transition={{ duration: 0.8 }}
                 >
                     <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-4">
-                        IAT 210 Board Game
+                        Red Corridor
                     </h1>
                     <p className="text-xl text-muted-foreground mb-8">
-                        A turn-based board game project exploring player
-                        decision-making, feedback, and balance through applied
-                        game design theory.
+                        A grid-based maze and corridor system focused on path
+                        construction, traversal logic, and constraint-driven
+                        movement.
                     </p>
 
                     <div className="flex gap-4 mb-12">
                         <motion.a
                             whileHover={{ scale: 1.05 }}
-                            href="https://github.com"
-                            className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold"
+                            href="https://github.com/James-hg/RedCorridor"
+                            className="flex items-center gap-2 px-6 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/5"
                         >
                             <Github className="w-5 h-5" />
                             View Code
                         </motion.a>
                         <motion.a
                             whileHover={{ scale: 1.05 }}
-                            href="/iat210/boardgame"
-                            className="flex items-center gap-2 px-6 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/5"
+                            href="https://drive.google.com/file/d/10E-K-Jd5Qw11IhDcKS6pJzEomj2RDH3x/view"
+                            className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold"
                         >
                             <ExternalLink className="w-5 h-5" />
-                            Live Demo
+                            View Demo
                         </motion.a>
                     </div>
 
@@ -73,18 +73,19 @@ export default function IAT210Project() {
                                 Overview
                             </h2>
                             <p className="text-lg text-muted-foreground leading-relaxed">
-                                This project was developed as part of IAT 210
-                                (Game Studies) and focuses on the design and
-                                analysis of a turn-based board game. The goal
-                                was to translate theoretical concepts from game
-                                studies into a playable system, examining how
-                                rules, mechanics, and feedback structures shape
-                                player behavior and experience.
+                                RedCorridor is a programming project centered on
+                                navigating structured corridors within a
+                                constrained grid environment. The project
+                                explores how movement rules, spatial
+                                constraints, and path logic interact to
+                                determine valid traversal through a maze-like
+                                system.
                                 <br />
                                 <br />
-                                The project emphasizes iterative design,
-                                playtesting, and critical reflection grounded in
-                                formal game design theory.
+                                The emphasis of the project is on algorithmic
+                                reasoning and control flow, rather than visual
+                                presentation, making it a strong demonstration
+                                of problem-solving and systems thinking.
                             </p>
                         </section>
 
@@ -94,11 +95,11 @@ export default function IAT210Project() {
                             </h2>
                             <ul className="space-y-3">
                                 {[
-                                    "Turn-based board game with clearly defined rules, objectives, and win conditions",
-                                    "Strategic decision-making driven by risk, reward, and information availability",
-                                    "Systems designed to encourage meaningful player choices rather than dominant strategies",
-                                    "Iterative balancing informed by structured playtesting and observation",
-                                    "Documentation and reflection linking theory to design outcomes",
+                                    "Grid-based environment with constrained corridors and movement rules",
+                                    "Deterministic traversal logic enforcing valid paths and boundaries",
+                                    "Clear separation between environment representation and movement logic",
+                                    "Structured input and state tracking for player or agent position",
+                                    "Focus on correctness, edge cases, and rule enforcement",
                                 ].map((feature, i) => (
                                     <motion.li
                                         key={i}
@@ -123,28 +124,28 @@ export default function IAT210Project() {
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                                 {[
                                     {
-                                        category: "Graphics",
-                                        tech: "Three.js, WebGL, GLSL",
-                                    },
-                                    {
                                         category: "Frontend",
-                                        tech: "React, TypeScript, Canvas API",
+                                        tech: "React, TypeScript, Tailwind CSS",
                                     },
                                     {
-                                        category: "Build Tools",
-                                        tech: "Vite, Webpack",
+                                        category: "Backend",
+                                        tech: "Node.js, Express, GraphQL",
                                     },
                                     {
-                                        category: "Libraries",
-                                        tech: "Perlin Noise, Math.js",
+                                        category: "Database",
+                                        tech: "PostgreSQL, Redis",
                                     },
                                     {
-                                        category: "Performance",
-                                        tech: "RequestAnimationFrame",
+                                        category: "DevOps",
+                                        tech: "Docker, AWS, GitHub Actions",
+                                    },
+                                    {
+                                        category: "Tools",
+                                        tech: "VS Code, Postman, Figma",
                                     },
                                     {
                                         category: "Testing",
-                                        tech: "Jest, Vitest",
+                                        tech: "Jest, React Testing Library",
                                     },
                                 ].map((item) => (
                                     <motion.div
@@ -165,24 +166,27 @@ export default function IAT210Project() {
 
                         <section>
                             <h2 className="text-3xl font-bold text-foreground mb-4">
-                                Technical Deep Dive
+                                Challenges & Solutions
                             </h2>
                             <div className="space-y-6">
                                 {[
                                     {
-                                        title: "Preventing dominant strategies that reduce meaningful decision-making",
-                                        description:
-                                            "Adjusted resource constraints, turn structure, and risk-reward tradeoffs to encourage diverse strategies and emergent play.",
+                                        challenge:
+                                            "Ensuring movement logic respects corridor constraints and grid boundaries without allowing invalid states.",
+                                        solution:
+                                            "Implemented explicit rule checks and state validation at each movement step, preventing illegal transitions.",
                                     },
                                     {
-                                        title: "Aligning abstract theory with concrete gameplay mechanics",
-                                        description:
-                                            "Used formal frameworks (MDA, feedback analysis) to evaluate each rule change and its effect on player experience.",
+                                        challenge:
+                                            "Keeping traversal logic readable and maintainable as conditions increased.",
+                                        solution:
+                                            "Structured the logic into clear, modular components representing grid state, movement rules, and updates.",
                                     },
                                     {
-                                        title: "Balancing accessibility for new players with strategic depth",
-                                        description:
-                                            "Simplified core rules while preserving layered decision-making through secondary mechanics and player interaction.",
+                                        challenge:
+                                            "Debugging edge cases where paths terminate or become invalid.",
+                                        solution:
+                                            "Used systematic testing of boundary conditions and step-by-step state inspection to verify correctness.",
                                     },
                                 ].map((item, i) => (
                                     <motion.div
@@ -193,27 +197,32 @@ export default function IAT210Project() {
                                         className="p-6 bg-card border border-border rounded-lg"
                                     >
                                         <h3 className="font-semibold text-foreground mb-2 text-primary">
-                                            {item.title}
+                                            Challenge:
+                                        </h3>
+                                        <p className="text-muted-foreground mb-4">
+                                            {item.challenge}
+                                        </p>
+                                        <h3 className="font-semibold text-foreground mb-2 text-primary">
+                                            Solution:
                                         </h3>
                                         <p className="text-muted-foreground">
-                                            {item.description}
+                                            {item.solution}
                                         </p>
                                     </motion.div>
                                 ))}
                             </div>
                         </section>
-
                         <section>
                             <h2 className="text-3xl font-bold text-foreground mb-4">
                                 Learning Outcomes
                             </h2>
                             <ul className="space-y-3">
                                 {[
-                                    "Applied core game design theories such as mechanics-dynamics-aesthetics (MDA) to analyze how rules and systems shape player experience and emotional response.",
-                                    "Developed an understanding of player decision-making and feedback loops, examining how information, risk, and reward influence strategic choices over multiple turns.",
-                                    "Analyzed balance, dominant strategies, and emergent gameplay, iterating on rules to prevent degenerate strategies and encourage meaningful player agency.",
-                                    "Explored the role of conflict, uncertainty, and goals in sustaining engagement, drawing connections between theoretical models and observed playtest behavior.",
-                                    "Strengthened critical reflection skills by evaluating the game through formal analysis and playtesting data, linking theoretical concepts to concrete design revisions.",
+                                    "Strengthened understanding of grid-based algorithms and spatial reasoning.",
+                                    "Developed experience designing rule-driven movement systems with strict state validation.",
+                                    "Improved ability to reason about edge cases, constraints, and invariants in algorithmic problems.",
+                                    "Practiced writing clear, maintainable logic for systems where correctness is critical.",
+                                    "Built confidence working on lower-level problem-solving tasks foundational to larger systems.",
                                 ].map((outcome, i) => (
                                     <motion.li
                                         key={i}

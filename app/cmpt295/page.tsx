@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowLeft, Github, ExternalLink } from "lucide-react";
+import { ArrowLeft, Github, FilePen } from "lucide-react";
 
-export default function IAT210Project() {
+export default function QuizzzProject() {
     return (
         <div className="min-h-screen bg-gradient-to-b from-background via-background to-secondary/20">
             {/* Header */}
@@ -34,18 +34,18 @@ export default function IAT210Project() {
                     transition={{ duration: 0.8 }}
                 >
                     <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-4">
-                        IAT 210 Board Game
+                        Insertion Sort Performance Analyzer
                     </h1>
                     <p className="text-xl text-muted-foreground mb-8">
-                        A turn-based board game project exploring player
-                        decision-making, feedback, and balance through applied
-                        game design theory.
+                        A systems-level performance analysis project examining
+                        how algorithm design, compiler optimizations, and memory
+                        behavior affect real-world execution time.
                     </p>
 
                     <div className="flex gap-4 mb-12">
                         <motion.a
                             whileHover={{ scale: 1.05 }}
-                            href="https://github.com"
+                            href="https://github.com/James-hg/cmpt295"
                             className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold"
                         >
                             <Github className="w-5 h-5" />
@@ -53,11 +53,11 @@ export default function IAT210Project() {
                         </motion.a>
                         <motion.a
                             whileHover={{ scale: 1.05 }}
-                            href="/iat210/boardgame"
-                            className="flex items-center gap-2 px-6 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/5"
+                            href="/cmpt295/report.pdf"
+                            className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold"
                         >
-                            <ExternalLink className="w-5 h-5" />
-                            Live Demo
+                            <FilePen className="w-5 h-5" />
+                            View Final Report
                         </motion.a>
                     </div>
 
@@ -73,32 +73,66 @@ export default function IAT210Project() {
                                 Overview
                             </h2>
                             <p className="text-lg text-muted-foreground leading-relaxed">
-                                This project was developed as part of IAT 210
-                                (Game Studies) and focuses on the design and
-                                analysis of a turn-based board game. The goal
-                                was to translate theoretical concepts from game
-                                studies into a playable system, examining how
-                                rules, mechanics, and feedback structures shape
-                                player behavior and experience.
+                                Insertion Sort Performance Analyzer is a CMPT
+                                295 mini-project focused on understanding
+                                performance beyond Big-O notation. The project
+                                benchmarks multiple insertion sort
+                                implementations and analyzes how data movement
+                                strategies, compiler optimizations, branching
+                                behavior, and cache locality impact runtime on
+                                modern CPUs.
                                 <br />
                                 <br />
-                                The project emphasizes iterative design,
-                                playtesting, and critical reflection grounded in
-                                formal game design theory.
+                                Rather than treating insertion sort as a purely
+                                theoretical algorithm, this project evaluates
+                                how low-level implementation details translate
+                                into measurable performance differences.
                             </p>
                         </section>
 
                         <section>
                             <h2 className="text-3xl font-bold text-foreground mb-4">
-                                Key Features
+                                What Was Compared
                             </h2>
                             <ul className="space-y-3">
                                 {[
-                                    "Turn-based board game with clearly defined rules, objectives, and win conditions",
-                                    "Strategic decision-making driven by risk, reward, and information availability",
-                                    "Systems designed to encourage meaningful player choices rather than dominant strategies",
-                                    "Iterative balancing informed by structured playtesting and observation",
-                                    "Documentation and reflection linking theory to design outcomes",
+                                    "Standard insertion sort using C-style arrays",
+                                    "Insertion sort using std::vector to evaluate abstraction overhead",
+                                    "Optimized insertion sort using binary search and memmove",
+                                    "std::sort as a baseline reference",
+                                ].map((feature, i) => (
+                                    <motion.li
+                                        key={i}
+                                        initial={{ opacity: 0, x: -20 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: i * 0.1 }}
+                                        className="flex items-start gap-3 text-muted-foreground"
+                                    >
+                                        <span className="text-primary font-bold mt-1">
+                                            •
+                                        </span>
+                                        <span>{feature}</span>
+                                    </motion.li>
+                                ))}
+                            </ul>
+                            <br />
+                            <p>
+                                <strong>
+                                    Each implementation was tested on sorted,
+                                    reverse-sorted, random, and duplicate-heavy
+                                    inputs across multiple input sizes.
+                                </strong>
+                            </p>
+                        </section>
+                        <section>
+                            <h2 className="text-3xl font-bold text-foreground mb-4">
+                                Key Takeaways
+                            </h2>
+                            <ul className="space-y-3">
+                                {[
+                                    "Compiler optimizations (-O2, -O3) dramatically reduce instruction count and execution time.",
+                                    "Replacing branch-heavy loops with linear memory operations (memmove) significantly improves performance on modern CPUs.",
+                                    "Memory access patterns and branch predictability have a major impact on runtime, often more than algorithmic complexity alone.",
                                 ].map((feature, i) => (
                                     <motion.li
                                         key={i}
@@ -123,28 +157,28 @@ export default function IAT210Project() {
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                                 {[
                                     {
-                                        category: "Graphics",
-                                        tech: "Three.js, WebGL, GLSL",
-                                    },
-                                    {
                                         category: "Frontend",
-                                        tech: "React, TypeScript, Canvas API",
+                                        tech: "React, TypeScript, Tailwind CSS",
                                     },
                                     {
-                                        category: "Build Tools",
-                                        tech: "Vite, Webpack",
+                                        category: "Backend",
+                                        tech: "Python (FastAPI), ",
                                     },
                                     {
-                                        category: "Libraries",
-                                        tech: "Perlin Noise, Math.js",
+                                        category: "Database",
+                                        tech: "PostgreSQL, Redis",
                                     },
                                     {
-                                        category: "Performance",
-                                        tech: "RequestAnimationFrame",
+                                        category: "DevOps",
+                                        tech: "Docker, AWS, GitHub Actions",
+                                    },
+                                    {
+                                        category: "Tools",
+                                        tech: "VS Code, Postman, Figma",
                                     },
                                     {
                                         category: "Testing",
-                                        tech: "Jest, Vitest",
+                                        tech: "Jest, React Testing Library",
                                     },
                                 ].map((item) => (
                                     <motion.div
@@ -165,24 +199,27 @@ export default function IAT210Project() {
 
                         <section>
                             <h2 className="text-3xl font-bold text-foreground mb-4">
-                                Technical Deep Dive
+                                Challenges & Solutions
                             </h2>
                             <div className="space-y-6">
                                 {[
                                     {
-                                        title: "Preventing dominant strategies that reduce meaningful decision-making",
-                                        description:
-                                            "Adjusted resource constraints, turn structure, and risk-reward tradeoffs to encourage diverse strategies and emergent play.",
+                                        challenge:
+                                            "Understanding why algorithmically similar insertion sort implementations showed large performance differences in practice.",
+                                        solution:
+                                            "Benchmarked each variant under identical conditions and analyzed compiler output, performance counters, and memory behavior to identify the impact of branching, data movement, and abstraction overhead.",
                                     },
                                     {
-                                        title: "Aligning abstract theory with concrete gameplay mechanics",
-                                        description:
-                                            "Used formal frameworks (MDA, feedback analysis) to evaluate each rule change and its effect on player experience.",
+                                        challenge:
+                                            "Evaluating the real effect of compiler optimization flags beyond raw timing results.",
+                                        solution:
+                                            "Compiled the same code with -O0, -O2, and -O3, then compared execution time, generated assembly, and profiling data to connect optimizations to measurable performance changes.",
                                     },
                                     {
-                                        title: "Balancing accessibility for new players with strategic depth",
-                                        description:
-                                            "Simplified core rules while preserving layered decision-making through secondary mechanics and player interaction.",
+                                        challenge:
+                                            "Identifying performance bottlenecks caused by memory access and branch prediction.",
+                                        solution:
+                                            "Used profiling tools and cache analysis to study memory behavior and branch misses, revealing that replacing branch-heavy loops with linear memory operations (memmove) significantly improved performance.",
                                     },
                                 ].map((item, i) => (
                                     <motion.div
@@ -193,27 +230,30 @@ export default function IAT210Project() {
                                         className="p-6 bg-card border border-border rounded-lg"
                                     >
                                         <h3 className="font-semibold text-foreground mb-2 text-primary">
-                                            {item.title}
+                                            Challenge:
+                                        </h3>
+                                        <p className="text-muted-foreground mb-4">
+                                            {item.challenge}
+                                        </p>
+                                        <h3 className="font-semibold text-foreground mb-2 text-primary">
+                                            Solution:
                                         </h3>
                                         <p className="text-muted-foreground">
-                                            {item.description}
+                                            {item.solution}
                                         </p>
                                     </motion.div>
                                 ))}
                             </div>
                         </section>
-
                         <section>
                             <h2 className="text-3xl font-bold text-foreground mb-4">
                                 Learning Outcomes
                             </h2>
                             <ul className="space-y-3">
                                 {[
-                                    "Applied core game design theories such as mechanics-dynamics-aesthetics (MDA) to analyze how rules and systems shape player experience and emotional response.",
-                                    "Developed an understanding of player decision-making and feedback loops, examining how information, risk, and reward influence strategic choices over multiple turns.",
-                                    "Analyzed balance, dominant strategies, and emergent gameplay, iterating on rules to prevent degenerate strategies and encourage meaningful player agency.",
-                                    "Explored the role of conflict, uncertainty, and goals in sustaining engagement, drawing connections between theoretical models and observed playtest behavior.",
-                                    "Strengthened critical reflection skills by evaluating the game through formal analysis and playtesting data, linking theoretical concepts to concrete design revisions.",
+                                    "Gained practical experience benchmarking and analyzing performance at the systems level.",
+                                    "Learned how compiler optimizations, branching behavior, and cache locality influence runtime.",
+                                    "Developed confidence reading assembly output and profiling data to explain performance differences.",
                                 ].map((outcome, i) => (
                                     <motion.li
                                         key={i}
