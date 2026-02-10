@@ -14,14 +14,14 @@ export default function QuizzzProject() {
                 className="sticky top-0 z-40 bg-background/80 backdrop-blur-md border-b border-border"
             >
                 <div className="max-w-5xl mx-auto px-6 py-4">
-                    <Link href="/">
+                    <Link href="/projects">
                         <motion.button
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.95 }}
                             className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
                         >
                             <ArrowLeft className="w-5 h-5" />
-                            Back Home
+                            Back
                         </motion.button>
                     </Link>
                 </div>
@@ -157,28 +157,12 @@ export default function QuizzzProject() {
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                                 {[
                                     {
-                                        category: "Frontend",
-                                        tech: "React, TypeScript, Tailwind CSS",
-                                    },
-                                    {
                                         category: "Backend",
-                                        tech: "Python (FastAPI), ",
-                                    },
-                                    {
-                                        category: "Database",
-                                        tech: "PostgreSQL, Redis",
+                                        tech: "C++, Assembly",
                                     },
                                     {
                                         category: "DevOps",
-                                        tech: "Docker, AWS, GitHub Actions",
-                                    },
-                                    {
-                                        category: "Tools",
-                                        tech: "VS Code, Postman, Figma",
-                                    },
-                                    {
-                                        category: "Testing",
-                                        tech: "Jest, React Testing Library",
+                                        tech: "Makefile, Valgrind",
                                     },
                                 ].map((item) => (
                                     <motion.div

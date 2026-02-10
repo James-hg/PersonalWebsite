@@ -14,14 +14,14 @@ export default function NovelToAudioProject() {
                 className="sticky top-0 z-40 bg-background/80 backdrop-blur-md border-b border-border"
             >
                 <div className="max-w-5xl mx-auto px-6 py-4">
-                    <Link href="/">
+                    <Link href="/projects">
                         <motion.button
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.95 }}
                             className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
                         >
                             <ArrowLeft className="w-5 h-5" />
-                            Back Home
+                            Back
                         </motion.button>
                     </Link>
                 </div>
@@ -122,28 +122,24 @@ export default function NovelToAudioProject() {
                             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                                 {[
                                     {
-                                        category: "Graphics",
-                                        tech: "Three.js, WebGL, GLSL",
-                                    },
-                                    {
                                         category: "Frontend",
-                                        tech: "React, TypeScript, Canvas API",
+                                        tech: "None",
                                     },
                                     {
-                                        category: "Build Tools",
-                                        tech: "Vite, Webpack",
+                                        category: "Backend",
+                                        tech: "Python, requests, beautifulsoup, tqdm, pydub",
                                     },
                                     {
-                                        category: "Libraries",
-                                        tech: "Perlin Noise, Math.js",
+                                        category: "Database",
+                                        tech: "PostgreSQL",
                                     },
                                     {
-                                        category: "Performance",
-                                        tech: "RequestAnimationFrame",
+                                        category: "DevOps & Deployment",
+                                        tech: "Docker",
                                     },
                                     {
-                                        category: "Testing",
-                                        tech: "Jest, Vitest",
+                                        category: "AI & APIs",
+                                        tech: "Google Cloud TTS, Google Gemini API, Google Cloud Monitoring, Google Auth",
                                     },
                                 ].map((item) => (
                                     <motion.div

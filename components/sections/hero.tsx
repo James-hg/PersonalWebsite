@@ -2,12 +2,9 @@
 
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 
-interface HeroProps {
-    setActiveSection: (section: string) => void;
-}
-
-export default function Hero({ setActiveSection }: HeroProps) {
+export default function Hero() {
     return (
         <section className="min-h-[calc(100vh-80px)] flex flex-col items-center justify-center px-6 py-20 relative overflow-hidden">
             {/* Background animations */}
@@ -55,28 +52,31 @@ export default function Hero({ setActiveSection }: HeroProps) {
                     transition={{ duration: 0.8, delay: 0.3 }}
                     className="flex gap-4 justify-center flex-wrap"
                 >
-                    <motion.button
-                        whileHover={{
-                            scale: 1.05,
-                            boxShadow: "0 10px 30px rgba(127, 107, 237, 0.3)",
-                        }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => setActiveSection("projects")}
-                        className="px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold transition-all"
-                    >
-                        View My Work
-                    </motion.button>
-                    <motion.button
-                        whileHover={{
-                            scale: 1.05,
-                            boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
-                        }}
-                        whileTap={{ scale: 0.95 }}
-                        onClick={() => setActiveSection("contact")}
-                        className="px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/5 transition-all"
-                    >
-                        Get in Touch
-                    </motion.button>
+                    <Link href="/projects">
+                        <motion.span
+                            whileHover={{
+                                scale: 1.05,
+                                boxShadow:
+                                    "0 10px 30px rgba(127, 107, 237, 0.3)",
+                            }}
+                            whileTap={{ scale: 0.95 }}
+                            className="inline-block px-8 py-3 bg-primary text-primary-foreground rounded-lg font-semibold transition-all"
+                        >
+                            View My Work
+                        </motion.span>
+                    </Link>
+                    <Link href="/contact">
+                        <motion.span
+                            whileHover={{
+                                scale: 1.05,
+                                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.1)",
+                            }}
+                            whileTap={{ scale: 0.95 }}
+                            className="inline-block px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/5 transition-all"
+                        >
+                            Get in Touch
+                        </motion.span>
+                    </Link>
                 </motion.div>
             </motion.div>
 

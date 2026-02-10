@@ -1,17 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface NavigationProps {
     activeSection: string;
-    setActiveSection: (section: string) => void;
 }
 
-export default function Navigation({
-    activeSection,
-    setActiveSection,
-}: NavigationProps) {
-    const sections = ["home", "about", "skills", "projects", "contact"];
+export default function Navigation({ activeSection }: NavigationProps) {
+    const sections = [
+        { id: "home", href: "/" },
+        { id: "about", href: "/about" },
+        { id: "skills", href: "/skills" },
+        { id: "projects", href: "/projects" },
+        { id: "contact", href: "/contact" },
+    ];
 
     return (
         <motion.nav
@@ -32,19 +35,18 @@ export default function Navigation({
 
                 <div className="flex gap-1">
                     {sections.map((section, index) => (
-                        <motion.button
-                            key={section}
+                        <Link key={section.id} href={section.href}>
+                            <motion.span
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 + index * 0.05 }}
-                            onClick={() => setActiveSection(section)}
                             className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 relative ${
-                                activeSection === section
+                                activeSection === section.id
                                     ? "text-primary-foreground"
                                     : "text-foreground hover:text-primary"
                             }`}
                         >
-                            {activeSection === section && (
+                            {activeSection === section.id && (
                                 <motion.div
                                     layoutId="activeBackground"
                                     className="absolute inset-0 bg-primary rounded-lg -z-10"
@@ -55,8 +57,10 @@ export default function Navigation({
                                     }}
                                 />
                             )}
-                            {section.charAt(0).toUpperCase() + section.slice(1)}
-                        </motion.button>
+                            {section.id.charAt(0).toUpperCase() +
+                                section.id.slice(1)}
+                        </motion.span>
+                        </Link>
                     ))}
                 </div>
             </div>

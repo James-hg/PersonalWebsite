@@ -14,14 +14,14 @@ export default function XPProject() {
                 className="sticky top-0 z-40 bg-background/80 backdrop-blur-md border-b border-border"
             >
                 <div className="max-w-5xl mx-auto px-6 py-4">
-                    <Link href="/">
+                    <Link href="/projects">
                         <motion.button
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.95 }}
                             className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
                         >
                             <ArrowLeft className="w-5 h-5" />
-                            Back Home
+                            Back
                         </motion.button>
                     </Link>
                 </div>
@@ -123,27 +123,23 @@ export default function XPProject() {
                                 {[
                                     {
                                         category: "Frontend",
-                                        tech: "React, TypeScript, Tailwind CSS",
+                                        tech: "React, TypeScript, Vite, Tailwind",
                                     },
                                     {
                                         category: "Backend",
-                                        tech: "Node.js, Express, GraphQL",
+                                        tech: "Java, Spring Boot, Python",
                                     },
                                     {
                                         category: "Database",
-                                        tech: "PostgreSQL, Redis",
+                                        tech: "PostgreSQL",
                                     },
                                     {
                                         category: "DevOps",
-                                        tech: "Docker, AWS, GitHub Actions",
-                                    },
-                                    {
-                                        category: "Tools",
-                                        tech: "VS Code, Postman, Figma",
+                                        tech: "Docker, npm + Maven",
                                     },
                                     {
                                         category: "Testing",
-                                        tech: "Jest, React Testing Library",
+                                        tech: "Rest APIs, Gemma 3",
                                     },
                                 ].map((item) => (
                                     <motion.div

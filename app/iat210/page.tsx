@@ -14,14 +14,14 @@ export default function IAT210Project() {
                 className="sticky top-0 z-40 bg-background/80 backdrop-blur-md border-b border-border"
             >
                 <div className="max-w-5xl mx-auto px-6 py-4">
-                    <Link href="/">
+                    <Link href="/projects">
                         <motion.button
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.95 }}
                             className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
                         >
                             <ArrowLeft className="w-5 h-5" />
-                            Back Home
+                            Back
                         </motion.button>
                     </Link>
                 </div>

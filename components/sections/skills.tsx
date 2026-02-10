@@ -6,19 +6,27 @@ export default function Skills() {
   const skillCategories = [
     {
       title: 'Backend',
-      skills: ['Node.js', 'Python', 'Java', 'PostgreSQL', 'MongoDB', 'REST APIs'],
+      skills: ['Python', 'Java', 'FastAPI', 'Spring Boot', 'Pydantic', 'SQLAlchemy', 'REST APIs', 'JWT/OAuth2'],
     },
     {
       title: 'Frontend',
-      skills: ['React', 'TypeScript', 'Tailwind CSS', 'Next.js', 'HTML/CSS', 'JavaScript'],
+      skills: ['React', 'TypeScript', 'Next.js', 'Vite', 'Tailwind CSS', 'CSS', 'JavaFX', 'FXML'],
     },
     {
       title: 'DevOps & Tools',
-      skills: ['Docker', 'Git', 'AWS', 'CI/CD', 'Linux', 'Webpack'],
+      skills: ['Docker', 'Docker Compose', 'Nginx', 'Maven', 'npm', 'Vercel', 'Git', 'Webpack'],
     },
     {
-      title: 'Databases',
-      skills: ['SQL', 'Redis', 'Elasticsearch', 'Firebase', 'Database Design', 'Optimization'],
+      title: 'Databases & Data',
+      skills: ['PostgreSQL', 'SQLite', 'SQL', 'Database Design', 'Performance Analysis'],
+    },
+    {
+      title: 'AI & Cloud APIs',
+      skills: ['Google Gemini API', 'Google Cloud TTS', 'Google Auth', 'Google Cloud Monitoring'],
+    },
+    {
+      title: 'Systems & Testing',
+      skills: ['C++', 'Assembly', 'Makefile', 'Valgrind', 'Jest', 'Vitest', 'React Testing Library', 'JaCoCo'],
     },
   ]
 
@@ -86,10 +94,12 @@ export default function Skills() {
           <h3 className="text-xl font-bold text-foreground mb-6">Proficiency Levels</h3>
           <div className="space-y-4">
             {[
-              { name: 'Backend Development', level: 90 },
-              { name: 'Database Design', level: 85 },
-              { name: 'Frontend Development', level: 75 },
-              { name: 'DevOps & Cloud', level: 70 },
+              { name: 'Backend', level: 90 },
+              { name: 'Frontend', level: 85 },
+              { name: 'DevOps & Tools', level: 80 },
+              { name: 'Databases & Data', level: 84 },
+              { name: 'AI & Cloud APIs', level: 78 },
+              { name: 'Systems & Testing', level: 76 },
             ].map((skill) => (
               <div key={skill.name}>
                 <div className="flex justify-between mb-2">

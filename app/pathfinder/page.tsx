@@ -14,14 +14,14 @@ export default function PathfinderProject() {
                 className="sticky top-0 z-40 bg-background/80 backdrop-blur-md border-b border-border"
             >
                 <div className="max-w-5xl mx-auto px-6 py-4">
-                    <Link href="/">
+                    <Link href="/projects">
                         <motion.button
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.95 }}
                             className="flex items-center gap-2 text-primary hover:text-accent transition-colors"
                         >
                             <ArrowLeft className="w-5 h-5" />
-                            Back Home
+                            Back
                         </motion.button>
                     </Link>
                 </div>
@@ -118,26 +118,22 @@ export default function PathfinderProject() {
                                 {[
                                     {
                                         category: "Frontend",
-                                        tech: "React, TypeScript, Tailwind CSS",
+                                        tech: "React, TypeScript, Vite",
                                     },
                                     {
                                         category: "Backend",
-                                        tech: "Node.js, Express, GraphQL",
+                                        tech: "Python, FastAPI, Pydantic, OAuth2, JWT",
                                     },
                                     {
                                         category: "Database",
-                                        tech: "PostgreSQL, Redis",
+                                        tech: "SQLite",
                                     },
                                     {
                                         category: "DevOps",
-                                        tech: "Docker, AWS, GitHub Actions",
+                                        tech: "Docker, Nginx",
                                     },
                                     {
-                                        category: "Tools",
-                                        tech: "VS Code, Postman, Figma",
-                                    },
-                                    {
-                                        category: "Testing",
+                                        category: "AI & APIs",
                                         tech: "Jest, React Testing Library",
                                     },
                                 ].map((item) => (
