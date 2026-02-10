@@ -4,8 +4,16 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+type Project = {
+    id: string;
+    title: string;
+    description: string;
+    tech: string[];
+    link: string;
+};
+
 export default function Projects() {
-    const projects = [
+    const featuredProjects: Project[] = [
         {
             id: "quizzz",
             title: "Quizzz - AI Assisted Quiz Generation",
@@ -28,19 +36,47 @@ export default function Projects() {
             tech: ["Java Spring Boot", "React", "PostgreSQL", "Docker"],
             link: "/xp",
         },
+    ];
+    const personalProjects: Project[] = [
+        {
+            id: "quizzz",
+            title: "Quizzz - AI Assisted Quiz Generation",
+            description:
+                "A full-stack app for students to revise via multiple choice questions",
+            tech: ["Python FastAPI", "React", "PostgreSQL", "Docker"],
+            link: "/quizzz",
+        },
+        {
+            id: "novel-to-audio",
+            title: "Novel to Audiobook Automation",
+            description: "Convert a text novel to an audiobook",
+            tech: ["React", "Tailwind"],
+            link: "/novel-to-audio",
+        },
+    ];
+    const hackathons: Project[] = [
+        {
+            id: "pathfinder",
+            title: "Stormhacks 2025 - Pathfinder",
+            description: "A full-stack app trip planner",
+            tech: ["Python FastAPI", "React", "SQLite", "Docker"],
+            link: "/pathfinder",
+        },
+        {
+            id: "xp",
+            title: "Xhacks 2026 - Escape from Windows",
+            description: "A click and point game on browser",
+            tech: ["Java Spring Boot", "React", "PostgreSQL", "Docker"],
+            link: "/xp",
+        },
+    ];
+    const courseProjects: Project[] = [
         {
             id: "iat210-boardgame",
             title: "Guard Duty",
             description: "A board game prototype course project",
             tech: ["React", "Tailwind"],
             link: "/iat210",
-        },
-        {
-            id: "novel-to-audio",
-            title: "Novel to Audiobook Automation",
-            description: "Convert a text novel to an audiobook",
-            tech: ["Python", "Gemini API", "Google TTS API"],
-            link: "/novel-to-audio",
         },
         {
             id: "red-corridor",
@@ -56,6 +92,11 @@ export default function Projects() {
             tech: ["C++", "Assembly"],
             link: "/cmpt295",
         },
+    ];
+    const categorizedSections = [
+        { title: "Personal Projects", projects: personalProjects },
+        { title: "Hackathons", projects: hackathons },
+        { title: "Course Projects", projects: courseProjects },
     ];
 
     const containerVariants = {
@@ -77,6 +118,84 @@ export default function Projects() {
         },
     };
 
+    const renderProjectCard = (project: Project, featured = false) => (
+        <motion.div
+            key={project.id}
+            variants={itemVariants}
+            whileHover={featured ? { x: 10 } : { y: -4 }}
+            className={`group ${featured ? "" : "h-full"}`}
+        >
+            <Link href={project.link} className={featured ? "" : "block h-full"}>
+                <div
+                    className={`bg-card border border-border rounded-xl hover:border-primary/50 transition-all cursor-pointer ${
+                        featured ? "p-8" : "p-5 md:p-6 h-full flex flex-col"
+                    }`}
+                >
+                    <div className="flex items-start justify-between gap-4 mb-3">
+                        <div>
+                            <h3
+                                className={`font-bold text-foreground mb-2 ${
+                                    featured
+                                        ? "text-2xl"
+                                        : "text-lg md:text-xl leading-tight"
+                                }`}
+                            >
+                                {project.title}
+                            </h3>
+                            <p
+                                className={`text-muted-foreground ${
+                                    featured
+                                        ? "max-w-2xl text-base"
+                                        : "text-sm md:text-base"
+                                }`}
+                            >
+                                {project.description}
+                            </p>
+                        </div>
+                        <motion.div
+                            initial={{ x: 0 }}
+                            whileHover={{ x: 5 }}
+                            className="mt-1 shrink-0"
+                        >
+                            <ArrowRight
+                                className={`text-primary ${
+                                    featured ? "w-6 h-6" : "w-5 h-5"
+                                }`}
+                            />
+                        </motion.div>
+                    </div>
+
+                    <div
+                        className={`flex flex-wrap gap-2 ${
+                            featured ? "mt-6" : "mt-4"
+                        }`}
+                    >
+                        {project.tech.map((tech) => (
+                            <span
+                                key={tech}
+                                className={`bg-primary/10 text-primary rounded-full font-medium ${
+                                    featured
+                                        ? "px-3 py-1 text-sm"
+                                        : "px-2.5 py-1 text-xs md:text-sm"
+                                }`}
+                            >
+                                {tech}
+                            </span>
+                        ))}
+                    </div>
+
+                    <motion.div
+                        initial={{ width: 0 }}
+                        whileHover={{ width: "100%" }}
+                        className={`h-0.5 bg-gradient-to-r from-primary to-accent ${
+                            featured ? "mt-6" : "mt-4"
+                        }`}
+                    />
+                </div>
+            </Link>
+        </motion.div>
+    );
+
     return (
         <section className="min-h-screen flex items-center py-20 px-6">
             <motion.div
@@ -93,53 +212,23 @@ export default function Projects() {
                     Featured Projects
                 </motion.h2>
 
-                <div className="space-y-8">
-                    {projects.map((project, index) => (
-                        <motion.div
-                            key={project.id}
-                            variants={itemVariants}
-                            whileHover={{ x: 10 }}
-                            className="group"
-                        >
-                            <Link href={project.link}>
-                                <div className="p-8 bg-card border border-border rounded-xl hover:border-primary/50 transition-all cursor-pointer">
-                                    <div className="flex items-start justify-between mb-4">
-                                        <div>
-                                            <h3 className="text-2xl font-bold text-foreground mb-2">
-                                                {project.title}
-                                            </h3>
-                                            <p className="text-muted-foreground max-w-2xl">
-                                                {project.description}
-                                            </p>
-                                        </div>
-                                        <motion.div
-                                            initial={{ x: 0 }}
-                                            whileHover={{ x: 5 }}
-                                            className="mt-2"
-                                        >
-                                            <ArrowRight className="w-6 h-6 text-primary" />
-                                        </motion.div>
-                                    </div>
+                <div className="space-y-8">{featuredProjects.map((project) => renderProjectCard(project, true))}</div>
 
-                                    <div className="flex flex-wrap gap-2 mt-6">
-                                        {project.tech.map((tech) => (
-                                            <span
-                                                key={tech}
-                                                className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full font-medium"
-                                            >
-                                                {tech}
-                                            </span>
-                                        ))}
-                                    </div>
-
-                                    <motion.div
-                                        initial={{ width: 0 }}
-                                        whileHover={{ width: "100%" }}
-                                        className="h-0.5 bg-gradient-to-r from-primary to-accent mt-6"
-                                    />
-                                </div>
-                            </Link>
-                        </motion.div>
+                <div className="mt-16 md:mt-20 space-y-14 md:space-y-16">
+                    {categorizedSections.map((section) => (
+                        <div key={section.title}>
+                            <motion.h3
+                                variants={itemVariants}
+                                className="text-2xl md:text-3xl font-bold text-foreground mb-6"
+                            >
+                                {section.title}
+                            </motion.h3>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
+                                {section.projects.map((project) =>
+                                    renderProjectCard(project)
+                                )}
+                            </div>
+                        </div>
                     ))}
                 </div>
 
