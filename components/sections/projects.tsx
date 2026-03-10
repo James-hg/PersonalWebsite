@@ -69,6 +69,13 @@ export default function Projects() {
             tech: ["Java Spring Boot", "React", "PostgreSQL", "Docker"],
             link: "/xp",
         },
+        {
+            id: "mountfinance",
+            title: "Mountain Finance 2026 - Mountain Finance",
+            description: "A full-stack app personal finance tracker",
+            tech: ["Python FastAPI", "React", "JavaScript", "PostgreSQL"],
+            link: "/mountfinance",
+        },
     ];
     const courseProjects: Project[] = [
         {
@@ -125,7 +132,10 @@ export default function Projects() {
             whileHover={featured ? { x: 10 } : { y: -4 }}
             className={`group ${featured ? "" : "h-full"}`}
         >
-            <Link href={project.link} className={featured ? "" : "block h-full"}>
+            <Link
+                href={project.link}
+                className={featured ? "" : "block h-full"}
+            >
                 <div
                     className={`bg-card border border-border rounded-xl hover:border-primary/50 transition-all cursor-pointer ${
                         featured ? "p-8" : "p-5 md:p-6 h-full flex flex-col"
@@ -212,7 +222,11 @@ export default function Projects() {
                     Featured Projects
                 </motion.h2>
 
-                <div className="space-y-8">{featuredProjects.map((project) => renderProjectCard(project, true))}</div>
+                <div className="space-y-8">
+                    {featuredProjects.map((project) =>
+                        renderProjectCard(project, true),
+                    )}
+                </div>
 
                 <div className="mt-16 md:mt-20 space-y-14 md:space-y-16">
                     {categorizedSections.map((section) => (
@@ -225,7 +239,7 @@ export default function Projects() {
                             </motion.h3>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
                                 {section.projects.map((project) =>
-                                    renderProjectCard(project)
+                                    renderProjectCard(project),
                                 )}
                             </div>
                         </div>

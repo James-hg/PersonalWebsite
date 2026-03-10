@@ -46,3 +46,17 @@ npm install
 # Run the development server
 npm run dev
 ```
+
+## Contact Form Email Setup
+
+The contact form sends email through the `/api/contact` route using Resend.
+
+1. Create a local environment file:
+
+```bash
+cp .env.example .env.local
+```
+
+2. Set `RESEND_API_KEY` to your Resend API key.
+3. Optionally set `CONTACT_FROM_EMAIL` to a verified sender address (or leave the default for testing).
+4. In production (for example on Vercel), add the same environment variables in your project settings.
